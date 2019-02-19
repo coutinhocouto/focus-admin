@@ -5,16 +5,16 @@ require_once( ABSPATH . 'wp-admin/includes/file.php' );
 require_once( ABSPATH . 'wp-admin/includes/media.php' );
 
 $cpf_file = media_handle_upload('cpf-file', $post_id);
-$cpf_file_url = wp_get_attachment_url($attach_id);
+$cpf_file_url = wp_get_attachment_url($cpf_file);
 
 $rg_file = media_handle_upload('rg-file', $post_id);
-$rg_file_url = wp_get_attachment_url($attach_id);
+$rg_file_url = wp_get_attachment_url($rg_file);
 
 $renda_file = media_handle_upload('renda-file', $post_id);
-$renda_file_url = wp_get_attachment_url($attach_id);
+$renda_file_url = wp_get_attachment_url($renda_file);
 
 $residencia_file = media_handle_upload('residencia-file', $post_id);
-$residencia_file_url = wp_get_attachment_url($attach_id);
+$residencia_file_url = wp_get_attachment_url($residencia_file);
 
 
 $post_arr = array(
@@ -23,7 +23,6 @@ $post_arr = array(
 	'post_type'	   => 'locatario',
     'post_author'  => get_current_user_id(),
     'meta_input'   => array(
-        'imovel' => $_POST["imovel"],
 		'cpf-file' => $cpf_file_url,
 		'rg-file' => $rg_file_url,
 		'renda-file' => $renda_file_url,
@@ -109,7 +108,7 @@ $post_arr = array(
 		'telefone-referencia-pessoal2' => $_POST["telefone-referencia-pessoal2"],
 		'imoveis' => $_POST["imoveis"],
 		'veiculos' => $_POST["veiculos"],
-		'cartoes' => $_POST["cartoes"]
+		'outras-info' => $_POST["outras-info"]
     ),
 );
 
@@ -117,4 +116,5 @@ wp_insert_post( $post_arr, $wp_error );
 
 ?>
 
+<meta http-equiv="refresh" content="3; URL=https://focusadministradora.com/rentals/locatarios/">
 <h2>Locário criado com sucesso</h2>

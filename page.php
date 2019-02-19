@@ -38,6 +38,7 @@
 					
 					<?php } else if(is_page(300)) { include (TEMPLATEPATH . '/criar-locatario.php');  ?>
 					<?php } else if(is_page(325)) { include (TEMPLATEPATH . '/confirmar-locatario.php');  ?>
+					<?php } else if(is_page(298)) { include (TEMPLATEPATH . '/locatarios.php');  ?> 
 					
 					<?php } else if(is_page(296)) { include (TEMPLATEPATH . '/criar-locador.php');  ?>
 					

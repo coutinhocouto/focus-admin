@@ -202,217 +202,8 @@ jQuery(document).on('blur', "#cep4", function () {
 
 });
 
-(function($, d) {
-  jQuery.ajaxForm = function(options) {
-    var form = {
-      options: $.extend({
-        formSelector: 'form[data-ajax="true"]',
-        formRegion: 'main',
-        headerSelector: '.site-header',
-        errorMessage: "<strong>Error:</strong> We're sorry, but there has been a problem submitting your request. Please confirm all information and try again.",
-        successMessage: '<strong>Success:</strong> Your request has been successfully submitted.',
-        scrollPadding: 40
-      }, options),
-      
-      $form: function() {
-        return jQuery(form.options.formSelector, form.options.formRegion);
-      },
-      
-      $invalid: function() {
-        //console.log('getting invalid', $('input:invalid', form.$form()));
-        return jQuery('input:invalid', form.$form());
-      },
-
-      init: function() {
-
-        var $form = form.$form();
-        jQuery('input[required]', $form).each(function(el) {
-          form.setFieldWarning(this);
-        }).on('keyup blur change', function(el){
-          form.validateField(this);
-        });
-        
-        form.toggleSubmitButtons();
-
-        $form.on('click', '[type="submit"]', function(e) {
-          e.preventDefault();
-
-          form.toggleSubmitButtons();
-          form.submit($(e.target).parents('form'));
-          //form.validate($(e.target).parents('form'));
-        });
-      },
-
-      submit: function(target) {
-        var $form = jQuery(target), $alert = jQuery('.alert', $form), successMessage, errorMessage;
-        
-        successMessage = $alert.data('success-message') !== undefined ? $alert.data('success-message') : form.options.successMessage;
-        errorMessage = $alert.data('error-message') !== undefined ? $alert.data('error-message') : form.options.errorMessage;
-        
-        $alert.addClass('alert-warning').removeClass('alert-success alert-danger hidden').attr('aria-hidden', 'false').attr('role', 'alert').html('<p><span class="glyphicon glyphicon-refresh spin-icon"></span> Submitting the form...</p>');
-        
-        jQuery.post($form.data('ajax-url'), $form.serialize(), function(result) {}, 'json')
-          .done(function() {
-            //console.log('form finished');
-            $alert.addClass('alert-success').removeClass('alert-warning').html(successMessage);
-          })
-          .fail(function() {
-            //console.log('form failed');
-            $alert.addClass('alert-danger').removeClass('alert-warning').html(errorMessage);
-            form.toggleSubmitButtons(true);
-          });
-      },
-
-      /*validate: function(target) {
-        var invalid = $('input:invalid', $(target));
-
-        if (invalid.length < 0) {
-          form.submit(target);
-        } else {
-
-          invalid.each(function() {
-            form.setFieldInvalid(this);
-          });
-
-          var HeaderHeight = $(form.options.headerSelector).outerHeight();
-          $('html body').scrollTop($(invalid[0]).offset().top - HeaderHeight - form.options.scrollPadding);
-          $(invalid[0]).focus();
-        }
-      },*/
-      
-      validateField: function(target) {
-        var $target = $(target), $invalid = form.$invalid();
-        
-        if ($target.is(':valid')) {
-          form.setFieldValid(target);
-        } else {
-          form.setFieldInvalid(target);
-        }
-        
-        //console.log($invalid);
-        if ($invalid.length <= 0) {
-          //console.log('toggle submit true');
-          form.toggleSubmitButtons(true);
-        } else {
-          form.toggleSubmitButtons();
-        }
-      },
-
-      setFieldValid: function(target) {
-        //console.log('setting field valid', target);
-        var $target = jQuery(target),
-          $parent = $target.parents('.form-group'),
-            $status = jQuery('span.sr-only', $parent),
-            $icon = jQuery('span.glyphicon', $parent);
-          //$status = $('<span class="sr-only">(success)</span>').attr('id', $target.attr('id') + '-status'),
-          //$icon = $('<span class="glyphicon glyphicon-ok form-control-feedback aria-hidden="true"></span>');
-
-        $parent
-          .addClass('has-feedback has-success')
-        .removeClass('has-error has-warning');
-          //.append($icon)
-          //.append($status);
-        
-        $status.html('(success)');
-        $icon
-          .addClass('glyphicon-ok')
-        .removeClass('glyphicon-remove glyphicon-warning-sign');
-
-        $target
-          .attr('describedBy', $target.attr('id') + '-status');
-      },
-
-      setFieldWarning: function(target) {
-        var $target = jQuery(target),
-          $parent = $target.parents('.form-group'),
-          $status = jQuery('<span class="sr-only">(warning)</span>').attr('id', $target.attr('id') + '-status'),
-          $icon = jQuery('<span class="glyphicon glyphicon-warning-sign form-control-feedback aria-hidden="true"></span>');
-
-        $parent
-          .addClass('has-feedback has-warning')
-          .append($icon)
-          .append($status);
-
-        $target
-          .attr('describedBy', $target.attr('id') + '-status');
-      },
-
-      setFieldInvalid: function(target) {
-        var $target = jQuery(target),
-          $parent = $target.parents('.form-group'),
-            $status = jQuery('span.sr-only', $parent),
-            $icon = jQuery('span.glyphicon', $parent);
-          //$status = $('<span class="sr-only">(error)</span>').attr('id', $target.attr('id') + '-status'),
-          //$icon = $('<span class="glyphicon glyphicon-remove form-control-feedback aria-hidden="true"></span>');
-
-        $parent
-          .addClass('has-feedback has-error')
-        .removeClass('has-warning has-success');
-          //.append($icon)
-          //.append($status);
-
-        $status.html('(error)');
-        $icon
-        .addClass('glyphicon-remove')
-        .removeClass('glyphicon-ok glyphicon-warning-sign');
-        
-        $target
-          .attr('describedBy', $target.attr('id') + '-status');
-      },
-      
-      toggleSubmitButtons: function(enable) {
-        if (enable === undefined) {
-          enable = false;
-        }
-        
-        var $form = form.$form();
-        
-        if (enable) {
-          jQuery('[type="submit"]', form.options.formSelector).removeAttr('disabled');
-        } else {
-          jQuery('[type="submit"]', form.options.formSelector).attr('disabled', 'disabled');
-        }
-      }
-    };
-
-    return {
-      init: form.init()
-    };
-  };
-
-  jQuery.spamCheck = function(options) {
-    var spam = {
-      options: $.extend({
-        formSelector: 'form[data-spam="true"]',
-        isHumanSelector: '#antiSpam_isHuman'
-      }, options),
-
-      init: function() {
-        jQuery('.js-anti-spam').hide();
-        jQuery(d).on('click.antiSpam', spam.isHuman).on("keypress.antiSpam", spam.isHuman);
-      },
-
-      isHuman: function() {
-        //console.log('should set it true');
-        jQuery(spam.options.isHumanSelector).val('true');
-        jQuery(d).off('click.antiSpam').off('keypress.antiSpam');
-      }
-    };
-
-    return {
-      init: spam.init()
-    };
-  };
-
-  jQuery(d).ready(function() {
-    var spamCheck = new $.spamCheck(),
-      ajaxForm = new $.ajaxForm();
-  });
-})(jQuery, document);
-
 jQuery(document).ready(function($){
  
-  
 	$('.cep').mask('00000-000');
 	$('.cpf').mask('000.000.000-00', {reverse: true});
 	$('.date').mask('00/00/0000');
@@ -420,5 +211,27 @@ jQuery(document).ready(function($){
 	$('.cnpj').mask('00.000.000/0000-00', {reverse: true});
 	$('.money').mask("#.##0,00", {reverse: true});
 	
+	$('#listagem-table').DataTable({
+		"language": {
+			  "sEmptyTable": "Ainda não existe nada para ser exibido!",
+			  "sInfo": "Exibindo _START_ de _END_ do total de _TOTAL_",
+			  "sInfoEmpty": "0 de 0 do total de 0",
+			  "sInfoFiltered": "(filtrado de um total de _MAX_)",
+			  "sInfoPostFix": "",
+			  "sInfoThousands": ".",
+			  "sLengthMenu": "_MENU_ resultados",
+			  "sLoadingRecords": "Carregando...",
+			  "sProcessing": "Processando...",
+			  "sSearch": "Pesquisar",
+			  "sZeroRecords": "Nada encontrado.",
+			  "oPaginate": {
+				"sFirst": "Primeiro",
+				"sPrevious": "Anterior",
+				"sNext": "Próximo",
+				"sLast": "Último"
+			  }
+		},
+		responsive: true
+	});
   
 });

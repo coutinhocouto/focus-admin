@@ -1,43 +1,57 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<!-- START PAGE HEADING -->
+<div class="app-heading app-heading-bordered app-heading-page">
+	<div class="icon icon-lg">
+		<span class="icon-laptop-phone"></span>
+	</div>
+	<div class="title">
+		<h1>Focus Administradora - Rentals</h1>
+		<p><?php the_title(); ?></p>
+	</div>               
+	<!--<div class="heading-elements">
+		<a href="#" class="btn btn-danger" id="page-like"><span class="app-spinner loading"></span> loading...</a>
+		<a href="https://themeforest.net/item/boooya-revolution-admin-template/17227946?ref=aqvatarius&license=regular&open_purchase_for_item_id=17227946" class="btn btn-success btn-icon-fixed"><span class="icon-text">$24</span> Purchase</a>
+	</div>-->
+</div>
+<div class="app-heading-container app-heading-bordered bottom">
+	<ul class="breadcrumb">
+		<li><a href="https://focusadministradora.com/rentals">Dashboard</a></li>                                                     
+		<li class="active"><?php the_title(); ?></li>
+	</ul>
+</div>
+<!-- END PAGE HEADING -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+<!-- START PAGE CONTAINER -->
+<div class="container">
 
-				get_template_part( 'template-parts/post/content', get_post_format() );
+	<div class="row">
+		<div class="col-md-12">
+			<div class="block block-condensed">
+				<div class="app-heading app-heading-small">                                
+					<div class="title">
+						
+					</div>
+				</div>
+				<div class="block-content">
+					
+					<?php 
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-				the_post_navigation( array(
-					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-				) );
-
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
+						if ( is_singular( 'locatario' ) ) {
+							
+							include (TEMPLATEPATH . '/ver-locatario.php');
+							
+						}
+					?>
+				</div>
+			</div>
+		</div><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
 </div><!-- .wrap -->
+
+
+<?php endwhile; ?>
 
 <?php get_footer();

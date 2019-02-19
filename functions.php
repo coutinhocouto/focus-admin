@@ -576,20 +576,26 @@ function twentyseventeen_scripts() {
 	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'twentyseventeen-style' ), '1.0' );
 	wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'jquery-ui', get_theme_file_uri( '/js/vendor/jquery/jquery-ui.min.js' ), array(), '3.7.3' );
-	wp_enqueue_script( 'bootstrap', get_theme_file_uri( '/js/vendor/bootstrap/bootstrap.min.js' ), array(), '3.7.3' );
-	wp_enqueue_script( 'moment', get_theme_file_uri( '/js/vendor/moment/moment.min.js' ), array(), '3.7.3' );
-	wp_enqueue_script( 'scroll', get_theme_file_uri( '/js/vendor/customscrollbar/jquery.mCustomScrollbar.min.js' ), array(), '3.7.3' );
+	wp_enqueue_script( 'jquery-ui', get_theme_file_uri( '/js/vendor/jquery/jquery-ui.min.js' ), array(), '1.0' );
+	wp_enqueue_script( 'bootstrap', get_theme_file_uri( '/js/vendor/bootstrap/bootstrap.min.js' ), array(), '1.0' );
+	wp_enqueue_script( 'moment', get_theme_file_uri( '/js/vendor/moment/moment.min.js' ), array(), '1.0' );
+	wp_enqueue_script( 'scroll', get_theme_file_uri( '/js/vendor/customscrollbar/jquery.mCustomScrollbar.min.js' ), array(), '1.0' );
 	
-	wp_enqueue_script( 'd3', get_theme_file_uri( '/js/vendor/rickshaw/d3.v3.js' ), array(), '3.7.3' );
-	wp_enqueue_script( 'ricksaw', get_theme_file_uri( '/js/vendor/rickshaw/rickshaw.min.js' ), array(), '3.7.3' );
+	wp_enqueue_script( 'd3', get_theme_file_uri( '/js/vendor/rickshaw/d3.v3.js' ), array(), '1.0' );
+	wp_enqueue_script( 'ricksaw', get_theme_file_uri( '/js/vendor/rickshaw/rickshaw.min.js' ), array(), '1.0' );
 	
-	wp_enqueue_script( 'app', get_theme_file_uri( '/js/app.js' ), array(), '3.7.3' );
-	wp_enqueue_script( 'mask', get_theme_file_uri( '/js/jquery.mask.js' ), array(), '3.7.3' ); 
+	wp_enqueue_script( 'mask', get_theme_file_uri( '/js/jquery.mask.js' ), array(), '1.0' ); 
 	
-	wp_enqueue_script( 'custom', get_theme_file_uri( '/custom.js' ), array(), '3.7.3' );
+	wp_enqueue_script( 'datatable', get_theme_file_uri( '/js/vendor/datatables/jquery.dataTables.min.js' ), array(), '1.0' );
+	wp_enqueue_script( 'bdatatable', get_theme_file_uri( '/js/vendor/datatables/dataTables.bootstrap.min.js' ), array(), '1.0' );
+	wp_enqueue_script( 'alerts', get_theme_file_uri( '/js/vendor/noty/jquery.noty.packaged.js' ), array(), '1.0' );
 	
-	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
+	
+	wp_enqueue_script( 'app', get_theme_file_uri( '/js/app.js' ), array(), '1.0' );
+	
+	wp_enqueue_script( 'custom', get_theme_file_uri( '/custom.js' ), array(), '1.0' );
+	
+	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' ); 
 
 	
 }

@@ -2,39 +2,39 @@
 
 var app_plugins = {
     checkbox_radio: function(){
-        if($(".app-checkbox").length > 0 || $(".app-radio").length > 0){            
-            $(".app-checkbox label, .app-radio label").each(function(){
-                $(this).append("<span></span>");
+        if(jQuery(".app-checkbox").length > 0 || jQuery(".app-radio").length > 0){            
+            jQuery(".app-checkbox label, .app-radio label").each(function(){
+                jQuery(this).append("<span></span>");
             });
         }
     },
     switch_button: function(){
         
-        if($(".switch").length > 0){
-            $(".switch").each(function(){
-                $(this).append("<span></span>");
+        if(jQuery(".switch").length > 0){
+            jQuery(".switch").each(function(){
+                jQuery(this).append("<span></span>");
             });
         }
         
     },
     isotope: function(){
-        if($(".grid").length === 0) return false;            
+        if(jQuery(".grid").length === 0) return false;            
             
-        var $grid = $(".grid").isotope({
+        var $grid = jQuery(".grid").isotope({
             itemSelector: ".grid-element",
             layoutMode: "fitRows",
             percentPosition: true
         });
 
-        $("button[data-filter]").on("click", function() {
-            var filter = $(this).attr("data-filter");                    
+        jQuery("button[data-filter]").on("click", function() {
+            var filter = jQuery(this).attr("data-filter");                    
             $grid.isotope({filter: filter});
 
-            $(this).parents(".btn-group").find(".btn-primary").removeClass("btn-primary").addClass("btn-default");
-            $(this).removeClass("btn-default").addClass("btn-primary");
+            jQuery(this).parents(".btn-group").find(".btn-primary").removeClass("btn-primary").addClass("btn-default");
+            jQuery(this).removeClass("btn-default").addClass("btn-primary");
         });
 
-        $(window).resize(function(){
+        jQuery(window).resize(function(){
             setTimeout(function(){
                 $grid.isotope('layout');
                 
@@ -46,17 +46,17 @@ var app_plugins = {
     },
     formSpinner: function(){
         
-        if($("input.spinner").length > 0){
+        if(jQuery("input.spinner").length > 0){
             
-            $("input.spinner").each(function(){
-                $(this).wrap("<div class=\"spinner-wrapper\"></div>");
-                $(this).after("<button class=\"spinner-button-up\"><span class=\"fa fa-angle-up\"></span></button>");
-                $(this).after("<button class=\"spinner-button-down\"><span class=\"fa fa-angle-down\"></span></button>");                                                
+            jQuery("input.spinner").each(function(){
+                jQuery(this).wrap("<div class=\"spinner-wrapper\"></div>");
+                jQuery(this).after("<button class=\"spinner-button-up\"><span class=\"fa fa-angle-up\"></span></button>");
+                jQuery(this).after("<button class=\"spinner-button-down\"><span class=\"fa fa-angle-down\"></span></button>");                                                
             });                        
                                                     
-            $(".spinner-button-up").on("click", function(){
+            jQuery(".spinner-button-up").on("click", function(){
 
-                var input       = $(this).parent(".spinner-wrapper").find("input"),    
+                var input       = jQuery(this).parent(".spinner-wrapper").find("input"),    
                     spinMax     = input.attr("data-spinner-max") ? parseFloat(input.data("spinner-max")) : false,
                     spinMin     = input.attr("data-spinner-min") ? parseFloat(input.data("spinner-min")) : false,
                     spinStep    = input.attr("data-spinner-step") ? parseFloat(input.data("spinner-step")) : 1,
@@ -74,9 +74,9 @@ var app_plugins = {
                 return false;
             });
 
-            $(".spinner-button-down").on("click", function(){
+            jQuery(".spinner-button-down").on("click", function(){
 
-                var input       = $(this).parent(".spinner-wrapper").find("input"),
+                var input       = jQuery(this).parent(".spinner-wrapper").find("input"),
                     spinMax     = input.attr("data-spinner-max") ? parseFloat(input.data("spinner-max")) : false,
                     spinMin     = input.attr("data-spinner-min") ? parseFloat(input.data("spinner-min")) : false,
                     spinStep    = input.attr("data-spinner-step") ? parseFloat(input.data("spinner-step")) : 1,
@@ -98,30 +98,30 @@ var app_plugins = {
         
     },
     customScrollBar: function(){
-        if($(".scroll").length > 0)
-            $(".scroll").mCustomScrollbar({axis:"y", autoHideScrollbar: true, scrollInertia: 200, advanced: {autoScrollOnFocus: false}});
+        if(jQuery(".scroll").length > 0)
+            jQuery(".scroll").mCustomScrollbar({axis:"y", autoHideScrollbar: true, scrollInertia: 200, advanced: {autoScrollOnFocus: false}});
     },    
     bootstrap_select: function(){       
-        if($(".bs-select").length > 0)
-           $(".bs-select").selectpicker({iconBase: '', tickIcon: 'fa fa-check'});              
+        if(jQuery(".bs-select").length > 0)
+           jQuery(".bs-select").selectpicker({iconBase: '', tickIcon: 'fa fa-check'});              
     },
     select2: function(){
-        if($(".s2-select").length > 0){
-           $(".s2-select").select2({minimumResultsForSearch: Infinity});
+        if(jQuery(".s2-select").length > 0){
+           jQuery(".s2-select").select2({minimumResultsForSearch: Infinity});
         }
-        if($(".s2-select-search").length > 0){
-           $(".s2-select-search").select2();
+        if(jQuery(".s2-select-search").length > 0){
+           jQuery(".s2-select-search").select2();
         }
-        if($(".s2-select-tags").length > 0){
-           $(".s2-select-tags").select2({tags: true});
+        if(jQuery(".s2-select-tags").length > 0){
+           jQuery(".s2-select-tags").select2({tags: true});
         }
     },
     bootstrap_daterange: function(){
-        if($(".daterange").length > 0){
-            $("input.daterange").daterangepicker();
+        if(jQuery(".daterange").length > 0){
+            jQuery("input.daterange").daterangepicker();
         }
-        if($(".datetimerange").length > 0){
-            $('input.datetimerange').daterangepicker({
+        if(jQuery(".datetimerange").length > 0){
+            jQuery('input.datetimerange').daterangepicker({
                 timePicker: true,
                 timePickerIncrement: 30,
                 locale: {
@@ -145,78 +145,78 @@ var app_plugins = {
             close: 'icon-cross'
         * 
         */
-        if($(".bs-datepicker").length > 0){
-            $(".bs-datepicker").datetimepicker({format: "DD/MM/YYYY"});
+        if(jQuery(".bs-datepicker").length > 0){
+            jQuery(".bs-datepicker").datetimepicker({format: "DD/MM/YYYY"});
         }
         
-        if($(".bs-datetimepicker").length > 0){
-            $(".bs-datetimepicker").datetimepicker();
+        if(jQuery(".bs-datetimepicker").length > 0){
+            jQuery(".bs-datetimepicker").datetimepicker();
         }
-        if($(".bs-timepicker").length > 0){
-            $(".bs-timepicker").datetimepicker({format: "LT"});
-        }
-        
-        if($(".bs-datepicker-weekends").length > 0){
-            $(".bs-datepicker-weekends").datetimepicker({format: "DD/MM/YYYY", daysOfWeekDisabled: [0, 6]});
+        if(jQuery(".bs-timepicker").length > 0){
+            jQuery(".bs-timepicker").datetimepicker({format: "LT"});
         }
         
-        if($(".bs-datepicker-inline").length > 0){
-            $(".bs-datepicker-inline").datetimepicker({
+        if(jQuery(".bs-datepicker-weekends").length > 0){
+            jQuery(".bs-datepicker-weekends").datetimepicker({format: "DD/MM/YYYY", daysOfWeekDisabled: [0, 6]});
+        }
+        
+        if(jQuery(".bs-datepicker-inline").length > 0){
+            jQuery(".bs-datepicker-inline").datetimepicker({
                 inline: true                
             });
         }
         
-        if($(".bs-datepicker-inline-time").length > 0){
-            $(".bs-datepicker-inline-time").datetimepicker({
+        if(jQuery(".bs-datepicker-inline-time").length > 0){
+            jQuery(".bs-datepicker-inline-time").datetimepicker({
                 inline: true,
                  sideBySide: true
             });
         }
         
-        if($(".bs-datepicker-inline-years").length > 0){
-            $(".bs-datepicker-inline-years").datetimepicker({
+        if(jQuery(".bs-datepicker-inline-years").length > 0){
+            jQuery(".bs-datepicker-inline-years").datetimepicker({
                 inline: true,
                 viewMode: 'years'
             });
         }
     },
     bootstrap_popover: function(){
-        $("[data-toggle='popover']").popover();
+        jQuery("[data-toggle='popover']").popover();
         
-        $(".popover-hover").on("mouseenter",function(){             
-            $(this).popover('show');
+        jQuery(".popover-hover").on("mouseenter",function(){             
+            jQuery(this).popover('show');
         }).on("mouseleave",function(){
-            $(this).popover('hide');
+            jQuery(this).popover('hide');
         });
                 
-        $(".modal").on("show.bs.modal", function () {
-            $("[data-toggle='popover']").popover("hide");
+        jQuery(".modal").on("show.bs.modal", function () {
+            jQuery("[data-toggle='popover']").popover("hide");
         });
     },
     bootstrap_tooltip: function(){        
-        $("[data-toggle='tooltip']").tooltip();        
+        jQuery("[data-toggle='tooltip']").tooltip();        
     },    
     maskedInput: function(){
-        if($("input[class^='mask_']").length > 0){
-            $("input.mask_tin").mask('99-9999999');
-            $("input.mask_ssn").mask('999-99-9999');        
-            $("input.mask_date").mask('9999-99-99');
-            $("input.mask_date_rev").mask('99-99-9999');
-            $("input.mask_product").mask('a*-999-a999');
-            $("input.mask_phone").mask('99 (999) 999-99-99');
-            $("input.mask_phone_ext").mask('99 (999) 999-9999? x99999');
-            $("input.mask_credit").mask('9999-9999-9999-9999');        
-            $("input.mask_percent").mask('99%');            
+        if(jQuery("input[class^='mask_']").length > 0){
+            jQuery("input.mask_tin").mask('99-9999999');
+            jQuery("input.mask_ssn").mask('999-99-9999');        
+            jQuery("input.mask_date").mask('9999-99-99');
+            jQuery("input.mask_date_rev").mask('99-99-9999');
+            jQuery("input.mask_product").mask('a*-999-a999');
+            jQuery("input.mask_phone").mask('99 (999) 999-99-99');
+            jQuery("input.mask_phone_ext").mask('99 (999) 999-9999? x99999');
+            jQuery("input.mask_credit").mask('9999-9999-9999-9999');        
+            jQuery("input.mask_percent").mask('99%');            
         }
     },
     noty: function(){
         
-        $(".notify").on("click",function(){
+        jQuery(".notify").on("click",function(){
             
             noty({
-                text: $(this).data("notify"),
-                type: $(this).data("notify-type"),
-                layout: $(this).data("notify-layout") ? $(this).data("notify-layout") : 'topRight',
+                text: jQuery(this).data("notify"),
+                type: jQuery(this).data("notify-type"),
+                layout: jQuery(this).data("notify-layout") ? jQuery(this).data("notify-layout") : 'topRight',
                 animation: {
                     open: 'animated bounceIn',
                     close: 'animated fadeOut',                    
@@ -229,22 +229,22 @@ var app_plugins = {
     },
     datatables: function(){
         
-        if($(".datatable-basic").length > 0){
-            $(".datatable-basic").DataTable({
+        if(jQuery(".datatable-basic").length > 0){
+            jQuery(".datatable-basic").DataTable({
                 searching: false,
                 paging: false,
                 info: false
             });
         }
         
-        if($(".datatable-extended").length > 0){
-            $(".datatable-extended").DataTable();
+        if(jQuery(".datatable-extended").length > 0){
+            jQuery(".datatable-extended").DataTable();
         }
         
     },
     knob: function(){
-        if($(".knob").length > 0){
-            $(".knob").knob({
+        if(jQuery(".knob").length > 0){
+            jQuery(".knob").knob({
                 'format' : function (value) {
                    return value + '%';
                 }
@@ -252,20 +252,20 @@ var app_plugins = {
         }
     },
     sparkline: function(){
-        if($(".sparkline").length > 0)
-            $(".sparkline").sparkline('html', { enableTagOptions: true,disableHiddenCheck: true});   
+        if(jQuery(".sparkline").length > 0)
+            jQuery(".sparkline").sparkline('html', { enableTagOptions: true,disableHiddenCheck: true});   
     },
     wizard: function(){
         
-        if($(".wizard").length > 0){
+        if(jQuery(".wizard").length > 0){
 
             //check count of steps in each wizard
-            $(".wizard > ul").each(function(){
-                $(this).addClass("steps_"+$(this).children("li").length);
+            jQuery(".wizard > ul").each(function(){
+                jQuery(this).addClass("steps_"+jQuery(this).children("li").length);
             });// ./end                                    
             
             // init wizard plugin
-            $(".wizard").smartWizard({
+            jQuery(".wizard").smartWizard({
                 // This part (using for wizard validation) of code can be removed FROM 
                 onLeaveStep: function(obj){
                     var wizard = obj.parents(".wizard");
@@ -274,7 +274,7 @@ var app_plugins = {
 
                         var valid = true;
 
-                        $('input,textarea',$(obj.attr("href"))).each(function(i,v){
+                        jQuery('input,textarea',jQuery(obj.attr("href"))).each(function(i,v){
                             valid = validate.element(v) && valid;
                         });
 
@@ -335,10 +335,10 @@ var app_plugins = {
     }
 };
 
-$(function(){
+jQuery(function(){
     app_plugins.loaded();
 });
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
     app.loaded();
-});
+}); 
