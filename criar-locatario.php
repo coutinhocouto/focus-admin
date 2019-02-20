@@ -57,21 +57,21 @@
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome * </label>
-						<input class="form-control" name="nome" required="required" data-error="Please enter your full name." />
+						<input class="form-control" name="nome" required="required" />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">CPF * </label>
-						<input class="form-control cpf" name="cpf" />
+						<input class="form-control cpf" name="cpf" required="required" />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">Data de nascimento * </label>
-						<input class="form-control date" type="text" name="data-nascimento"  />
+						<input class="form-control date" type="text" name="data-nascimento" required="required"  />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Nacionalidade * </label>
-						<select class="form-control" name="naturalidade" >
+						<select class="form-control" name="naturalidade" required="required" >
 							<option value="">Selecione</option>
 							<option value="Brasileira">Brasileira</option>
 							<option value="Estrangeira">Estrangeira</option>
@@ -79,7 +79,7 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Naturalidade * </label>
-						<select name="estado" class="form-control">
+						<select name="estado" class="form-control" required="required">
 							<option value="">Selecione</option>
 							<option value="ES">Estrangeiro</option>
 							<option value="AC">AC</option>
@@ -113,7 +113,7 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Sexo * </label>
-						<select class="form-control" name="sexo">
+						<select class="form-control" name="sexo" required="required">
 							<option value="">Selecione</option>
 							<option value="Masculino">Masculino</option>
 							<option value="Feminino">Feminino</option>
@@ -123,19 +123,19 @@
 				<div class="form-group">
 					<div class="col-md-12">
 						<label class="control-label">Nome da mãe * </label>
-						<input class="form-control" type="text" name="nome-mae"  />
+						<input class="form-control" type="text" name="nome-mae" required="required"  />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-12">
 						<label class="control-label">Nome da pai * </label>
-						<input class="form-control" type="text" name="nome-pai" />
+						<input class="form-control" type="text" name="nome-pai" required="required" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Estado civil * </label>
-						<select class="form-control" name="estado-civil" >
+						<select class="form-control" name="estado-civil" required="required" >
 							<option value="">Selecione</option>
 							<option value="Brasileira">Casado</option>
 							<option value="Estrangeira">Solteiro</option>
@@ -143,47 +143,47 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Identidade * </label>
-						<input class="form-control" type="text" name="rg"/>
+						<input class="form-control" type="text" name="rg" required="required"/>
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Orgão expedidor * </label>
-						<input class="form-control" type="text" name="orgao" />
+						<input class="form-control" type="text" name="orgao" required="required" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-2">
 						<label class="control-label">Reside há anos * </label>
-						<input class="form-control" type="number" name="anos"  />
+						<input class="form-control" type="number" name="anos"  required="required" />
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">e meses * </label>
-						<input class="form-control" type="number" name="meses"  />
+						<input class="form-control" type="number" name="meses"  required="required" />
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">no CEP * </label>
-						<input class="form-control cep" type="text" name="cep-pessoal" id="cep1" />
+						<input class="form-control cep" type="text" name="cep-pessoal" id="cep1"  required="required"/>
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">Endereço * </label>
-						<input class="form-control" type="text" name="endereco-pessoal" id="log1"  />
+						<input class="form-control" type="text" name="endereco-pessoal" id="log1"  required="required" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-2">
 						<label class="control-label">Nº * </label>
-						<input class="form-control" type="number" name="numero-pessoal" />
+						<input class="form-control" type="number" name="numero-pessoal"  required="required"/>
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Bairro * </label>
-						<input class="form-control" type="text" name="bairro-pessoal" id="bar1"  />
+						<input class="form-control" type="text" name="bairro-pessoal" id="bar1"  required="required" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Cidade * </label>
-						<input class="form-control" type="text" name="cidade-pessoal" id="loca1"  />
+						<input class="form-control" type="text" name="cidade-pessoal" id="loca1"  required="required" />
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">Estado * </label>
-						<select class="form-control" name="estado-pessoal" id="uf1" >
+						<select class="form-control" name="estado-pessoal" id="uf1" required="required" >
 							<option value="">Selecione</option>
 							<option value="AC">AC</option>
 							<option value="AL">AL</option>
@@ -218,11 +218,11 @@
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Telefone * </label>
-						<input class="form-control telefone" type="text" name="telefone-pessoal"  />
+						<input class="form-control telefone" type="text" name="telefone-pessoal"  required="required" />
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">E-mail * </label>
-						<input class="form-control" type="email" name="email-pessoal" />
+						<input class="form-control" type="email" name="email-pessoal" required="required" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -237,12 +237,12 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">A quem? * </label>
-						<input class="form-control" type="text" name="nome-aluguel" placeholder="Nome" />
-						<input class="form-control telefone" type="text" name="telefone-aluguel" placeholder="Telefone" />
+						<input class="form-control" type="text" name="nome-aluguel" placeholder="Nome"  required="required"/>
+						<input class="form-control telefone" type="text" name="telefone-aluguel" placeholder="Telefone" required="required" />
 					</div>		
 					<div class="col-md-4">
 						<label class="control-label">Em caso negativo, porque? * </label>
-						<textarea class="form-control" name="porque" rows="5"></textarea>
+						<textarea class="form-control" name="porque" rows="5" required="required"></textarea>
 					</div>
 				</div>
 			</div>
