@@ -233,5 +233,6 @@ jQuery(document).ready(function($){
 		},
 		responsive: true
 	});
+	
   
 });

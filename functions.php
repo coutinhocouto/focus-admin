@@ -574,6 +574,7 @@ function twentyseventeen_scripts() {
 
 	// Load the Internet Explorer 8 specific stylesheet.
 	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'twentyseventeen-style' ), '1.0' );
+	wp_enqueue_style( 'bootstrapvalidator', '//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css', array(), '1.0' );
 	wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'jquery-ui', get_theme_file_uri( '/js/vendor/jquery/jquery-ui.min.js' ), array(), '1.0' );
@@ -590,6 +591,7 @@ function twentyseventeen_scripts() {
 	wp_enqueue_script( 'bdatatable', get_theme_file_uri( '/js/vendor/datatables/dataTables.bootstrap.min.js' ), array(), '1.0' );
 	wp_enqueue_script( 'alerts', get_theme_file_uri( '/js/vendor/noty/jquery.noty.packaged.js' ), array(), '1.0' );
 	
+	wp_enqueue_script( 'validator', 'https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js', array(), '1.0' );
 	
 	wp_enqueue_script( 'app', get_theme_file_uri( '/js/app.js' ), array(), '1.0' );
 	

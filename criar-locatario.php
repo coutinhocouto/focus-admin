@@ -7,7 +7,7 @@
 	</div>
 
 	<div>
-		<form action="https://focusadministradora.com/rentals/locatarios/locatario-adicionado-com-sucesso/" method="post" enctype="multipart/form-data">
+		<form action="https://focusadministradora.com/rentals/locatarios/locatario-adicionado-com-sucesso/" id="form-padrao" method="post" enctype="multipart/form-data" role="form" data-toggle="validator" novalidate="true">
 		<ul class="nav nav-tabs nav-justified">
 			<li class="active"><a href="#tabs-1" data-toggle="tab">Informações Principais</a></li>
 			<li><a href="#tabs-2" data-toggle="tab">Dados Pessoais</a></li>
@@ -57,7 +57,7 @@
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome * </label>
-						<input class="form-control" name="nome"  />
+						<input class="form-control" name="nome" required="required" data-error="Please enter your full name." />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">CPF * </label>
