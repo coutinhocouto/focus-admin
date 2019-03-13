@@ -7,7 +7,7 @@
 	</div>
 
 	<div>
-		<form action="https://focusadministradora.com/rentals/locatarios/locatario-adicionado-com-sucesso/" method="post">
+		<form action="https://focusadministradora.com/rentals/locadores/locador-adicionado-com-sucesso/" id="form-padrao"  method="post" role="form" data-toggle="validator" novalidate="true">
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome * </label>
@@ -106,27 +106,19 @@
 				</div>
 				<div class="form-group">
 					<div class="col-md-2">
-						<label class="control-label">Reside há anos * </label>
-						<input class="form-control" type="number" name="anos" required="" />
-					</div>
-					<div class="col-md-2">
-						<label class="control-label">e meses * </label>
-						<input class="form-control" type="number" name="meses" required="" />
-					</div>
-					<div class="col-md-2">
-						<label class="control-label">no CEP * </label>
+						<label class="control-label">CEP * </label>
 						<input class="form-control cep" type="text" name="cep-pessoal" id="cep1" required="" />
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-8">
 						<label class="control-label">Endereço * </label>
 						<input class="form-control" type="text" name="endereco-pessoal" id="log1" required="" />
 					</div>
-				</div>
-				<div class="form-group">
 					<div class="col-md-2">
 						<label class="control-label">Nº * </label>
 						<input class="form-control" type="number" name="numero-pessoal" required="" />
 					</div>
+				</div>
+				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Bairro * </label>
 						<input class="form-control" type="text" name="bairro-pessoal" id="bar1" required="" />
@@ -135,7 +127,7 @@
 						<label class="control-label">Cidade * </label>
 						<input class="form-control" type="text" name="cidade-pessoal" id="loca1" required="" />
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-4">
 						<label class="control-label">Estado * </label>
 						<select class="form-control" name="estado-pessoal" id="uf1" required="">
 							<option value="">Selecione</option>
@@ -170,6 +162,12 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Complemento</label>
+						<input class="form-control" type="text" name="complemento-pessoal" />
+					</div>
+				</div>
+				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Telefone * </label>
 						<input class="form-control telefone" type="text" name="telefone-pessoal" required="" />
@@ -177,26 +175,6 @@
 					<div class="col-md-6">
 						<label class="control-label">E-mail * </label>
 						<input class="form-control" type="email" name="email-pessoal" required="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-4">
-						<label class="control-label">Paga aluguel? * </label>
-						<div class="app-radio"> 
-							<label><input type="radio" name="aluguel" value="Sim" checked=""> Sim<span></span></label> 
-						</div>
-						<div class="app-radio"> 
-							<label><input type="radio" name="aluguel" value="Não"> Não<span></span></label> 
-						</div>
-					</div>
-					<div class="col-md-4">
-						<label class="control-label">A quem? * </label>
-						<input class="form-control" type="text" name="nome-aluguel" required="" placeholder="Nome" />
-						<input class="form-control telefone" type="text" name="telefone-aluguel" required="" placeholder="Telefone" />
-					</div>		
-					<div class="col-md-4">
-						<label class="control-label">Em caso negativo, porque? * </label>
-						<textarea class="form-control" name="porque" rows="5"></textarea>
 					</div>
 				</div>
 			</div>

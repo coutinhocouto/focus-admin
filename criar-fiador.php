@@ -7,7 +7,7 @@
 	</div>
 
 	<div>
-		<form action="https://focusadministradora.com/rentals/locatarios/locatario-adicionado-com-sucesso/" method="post">
+		<form action="https://focusadministradora.com/rentals/fiadores/fiador-adicionado-com-sucesso/" id="form-padrao" method="post" enctype="multipart/form-data" role="form" data-toggle="validator" novalidate="true">
 		<ul class="nav nav-tabs nav-justified">
 			<li class="active"><a href="#tabs-1" data-toggle="tab">Informações Principais</a></li>
 			<li><a href="#tabs-2" data-toggle="tab">Dados Pessoais</a></li>
@@ -18,10 +18,10 @@
 		</ul>
 		<div class="tab-content">
 			<div class="tab-pane active" id="tabs-1">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<div class="col-md-8">
 						<label class="control-label">Imóvel pretendido *</label>
-						<select name="imovel" class="form-control" required="">
+						<select name="imovel" class="form-control">
         					<option value="">Selecione</option>
 						</select>
 					</div>
@@ -29,7 +29,7 @@
 						<label class="control-label">Aluguel *</label>
 						<span id="aluguel"></span>
 					</div>
-				</div>
+				</div>-->
 				<div class="form-group">
 					<div class="col-md-3">
 						<label class="control-label">Cópia do CPF *</label>
@@ -52,33 +52,26 @@
   accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 					</div>
 				</div>
-				<div class="form-group">
-					<div class="col-md-12">
-						<label class="control-label">Certidão de Ônus Reais *</label>
-						<input type="file" name="residencia-file"
-  accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
-					</div>
-				</div>
 			</div>
 			<div class="tab-pane" id="tabs-2">
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome * </label>
-						<input class="form-control" name="nome" required="" />
+						<input class="form-control" name="nome" required="required" />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">CPF * </label>
-						<input class="form-control cpf" name="cpf" required="" />
+						<input class="form-control cpf" name="cpf" required="required" />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">Data de nascimento * </label>
-						<input class="form-control date" type="text" name="data-nascimento" required="" />
+						<input class="form-control date" type="text" name="data-nascimento" required="required"  />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Nacionalidade * </label>
-						<select class="form-control" name="naturalidade" required="">
+						<select class="form-control" name="naturalidade" required="required" >
 							<option value="">Selecione</option>
 							<option value="Brasileira">Brasileira</option>
 							<option value="Estrangeira">Estrangeira</option>
@@ -86,7 +79,7 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Naturalidade * </label>
-						<select name="estado" class="form-control" required="">
+						<select name="estado" class="form-control" required="required">
 							<option value="">Selecione</option>
 							<option value="ES">Estrangeiro</option>
 							<option value="AC">AC</option>
@@ -120,7 +113,7 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Sexo * </label>
-						<select class="form-control" name="sexo" required="">
+						<select class="form-control" name="sexo" required="required">
 							<option value="">Selecione</option>
 							<option value="Masculino">Masculino</option>
 							<option value="Feminino">Feminino</option>
@@ -130,19 +123,19 @@
 				<div class="form-group">
 					<div class="col-md-12">
 						<label class="control-label">Nome da mãe * </label>
-						<input class="form-control" type="text" name="nome-mae" required="" />
+						<input class="form-control" type="text" name="nome-mae" required="required"  />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-12">
 						<label class="control-label">Nome da pai * </label>
-						<input class="form-control" type="text" name="nome-pai" required="" />
+						<input class="form-control" type="text" name="nome-pai" required="required" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Estado civil * </label>
-						<select class="form-control" name="estado-civil" required="">
+						<select class="form-control" name="estado-civil" required="required" >
 							<option value="">Selecione</option>
 							<option value="Brasileira">Casado</option>
 							<option value="Estrangeira">Solteiro</option>
@@ -150,47 +143,47 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Identidade * </label>
-						<input class="form-control" type="text" name="rg" required="" />
+						<input class="form-control" type="text" name="rg" required="required"/>
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Orgão expedidor * </label>
-						<input class="form-control" type="text" name="orgao" required="" />
+						<input class="form-control" type="text" name="orgao" required="required" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-2">
 						<label class="control-label">Reside há anos * </label>
-						<input class="form-control" type="number" name="anos" required="" />
+						<input class="form-control" type="number" name="anos"  required="required" />
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">e meses * </label>
-						<input class="form-control" type="number" name="meses" required="" />
+						<input class="form-control" type="number" name="meses"  required="required" />
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">no CEP * </label>
-						<input class="form-control cep" type="text" name="cep-pessoal" id="cep1" required="" />
+						<input class="form-control cep" type="text" name="cep-pessoal" id="cep1"  required="required"/>
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">Endereço * </label>
-						<input class="form-control" type="text" name="endereco-pessoal" id="log1" required="" />
+						<input class="form-control" type="text" name="endereco-pessoal" id="log1"  required="required" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-2">
 						<label class="control-label">Nº * </label>
-						<input class="form-control" type="number" name="numero-pessoal" required="" />
+						<input class="form-control" type="number" name="numero-pessoal"  required="required"/>
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Bairro * </label>
-						<input class="form-control" type="text" name="bairro-pessoal" id="bar1" required="" />
+						<input class="form-control" type="text" name="bairro-pessoal" id="bar1"  required="required" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Cidade * </label>
-						<input class="form-control" type="text" name="cidade-pessoal" id="loca1" required="" />
+						<input class="form-control" type="text" name="cidade-pessoal" id="loca1"  required="required" />
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">Estado * </label>
-						<select class="form-control" name="estado-pessoal" id="uf1" required="">
+						<select class="form-control" name="estado-pessoal" id="uf1" required="required" >
 							<option value="">Selecione</option>
 							<option value="AC">AC</option>
 							<option value="AL">AL</option>
@@ -223,13 +216,19 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Complemento</label>
+						<input class="form-control" type="text" name="complemento-pessoal" />
+					</div>
+				</div>
+				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Telefone * </label>
-						<input class="form-control telefone" type="text" name="telefone-pessoal" required="" />
+						<input class="form-control telefone" type="text" name="telefone-pessoal"  required="required" />
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">E-mail * </label>
-						<input class="form-control" type="email" name="email-pessoal" required="" />
+						<input class="form-control" type="email" name="email-pessoal" required="required" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -244,12 +243,12 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">A quem? * </label>
-						<input class="form-control" type="text" name="nome-aluguel" required="" placeholder="Nome" />
-						<input class="form-control telefone" type="text" name="telefone-aluguel" required="" placeholder="Telefone" />
+						<input class="form-control" type="text" name="nome-aluguel" placeholder="Nome"  required="required"/>
+						<input class="form-control telefone" type="text" name="telefone-aluguel" placeholder="Telefone" required="required" />
 					</div>		
 					<div class="col-md-4">
 						<label class="control-label">Em caso negativo, porque? * </label>
-						<textarea class="form-control" name="porque" rows="5"></textarea>
+						<textarea class="form-control" name="porque" rows="5" required="required"></textarea>
 					</div>
 				</div>
 			</div>
@@ -257,51 +256,51 @@
 				<div class="form-group">
 					<div class="col-md-3">
 						<label class="control-label">Profissão * </label>
-						<input class="form-control" type="text" name="profissao" required="" />
+						<input class="form-control" type="text" name="profissao"/>
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">Função * </label>
-						<input class="form-control" type="text" name="funcao" required="" />
+						<input class="form-control" type="text" name="funcao"  />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">Adimissão * </label>
-						<input class="form-control date" type="text" name="adimissao" required="" />
+						<input class="form-control date" type="text" name="adimissao" />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">Empresa * </label>
-						<input class="form-control" type="text" name="empresa" required="" />
+						<input class="form-control" type="text" name="empresa" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-3">
 						<label class="control-label">CNPJ * </label>
-						<input class="form-control cnpj" type="text" name="cnpj" required="" />
+						<input class="form-control cnpj" type="text" name="cnpj" />
 					</div>
 					<div class="col-md-3">
 						<label class="control-label">CEP * </label>
-						<input class="form-control cep" type="text" name="cep-profissional" id="cep2" required="" />
+						<input class="form-control cep" type="text" name="cep-profissional" id="cep2" />
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">Endereço * </label>
-						<input class="form-control" type="text" name="endereco-profissional" id="log2" required="" />
+						<input class="form-control" type="text" name="endereco-profissional" id="log2" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-2">
 						<label class="control-label">Nº * </label>
-						<input class="form-control" type="number" name="numero-profissional" required="" />
+						<input class="form-control" type="number" name="numero-profissional" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Bairro * </label>
-						<input class="form-control" type="text" name="bairro-profissional" id="bar2" required="" />
+						<input class="form-control" type="text" name="bairro-profissional" id="bar2" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Cidade * </label>
-						<input class="form-control" type="text" name="cidade-profissional" id="loca2" required="" />
+						<input class="form-control" type="text" name="cidade-profissional" id="loca2"/>
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">Estado * </label>
-						<select class="form-control" name="estado-profissional" id="uf2" required="">
+						<select class="form-control" name="estado-profissional" id="uf2">
 							<option value="">Selecione</option>
 							<option value="AC">AC</option>
 							<option value="AL">AL</option>
@@ -334,9 +333,15 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Complemento</label>
+						<input class="form-control" type="text" name="complemento-profissional" />
+					</div>
+				</div>
+				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Salário * </label>
-						<input class="form-control money" type="text" name="salario" required="" />
+						<input class="form-control money" type="text" name="salario" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Outras rendas * </label>
@@ -470,11 +475,11 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">no CEP </label>
-						<input class="form-control cep" type="text" name="cep-conjuje" id="cep1" />
+						<input class="form-control cep" type="text" name="cep-conjuje" id="cep3" />
 					</div>
 					<div class="col-md-5">
 						<label class="control-label">Endereço </label>
-						<input class="form-control" type="text" name="endereco-conjuje" id="log1" />
+						<input class="form-control" type="text" name="endereco-conjuje" id="log3" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -484,15 +489,15 @@
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Bairro </label>
-						<input class="form-control" type="text" name="bairro-conjuje" id="bar1" />
+						<input class="form-control" type="text" name="bairro-conjuje" id="bar3" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Cidade </label>
-						<input class="form-control" type="text" name="cidade-conjuje" id="loca1" />
+						<input class="form-control" type="text" name="cidade-conjuje" id="loca3" />
 					</div>
 					<div class="col-md-2">
 						<label class="control-label">Estado </label>
-						<select class="form-control" name="estado-conjuje" id="uf1" >
+						<select class="form-control" name="estado-conjuje" id="uf3" >
 							<option value="">Selecione</option>
 							<option value="AC">AC</option>
 							<option value="AL">AL</option>
@@ -525,6 +530,12 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Complemento</label>
+						<input class="form-control" type="text" name="complemento-conjuje" />
+					</div>
+				</div>
+				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Telefone </label>
 						<input class="form-control telefone" type="text" name="telefone-conjuje" />
@@ -549,29 +560,29 @@
 				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Banco *</label>
-						<input class="form-control" name="banco" required="" />
+						<input class="form-control" name="banco"  />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Agência *</label>
-						<input class="form-control" name="agencia" required="" />
+						<input class="form-control" name="agencia" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Telefone *</label>
-						<input class="form-control telefone" name="telefone-referencia" required="" />
+						<input class="form-control telefone" name="telefone-referencia" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-4">
 						<label class="control-label">Banco *</label>
-						<input class="form-control" name="banco2" required="" />
+						<input class="form-control" name="banco2" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Agência *</label>
-						<input class="form-control" name="agencia2" required="" />
+						<input class="form-control" name="agencia2" />
 					</div>
 					<div class="col-md-4">
 						<label class="control-label">Telefone *</label>
-						<input class="form-control telefone" name="telefone-referencia2" required="" />
+						<input class="form-control telefone" name="telefone-referencia2"/>
 					</div>
 				</div>
 				<div class="form-group">
@@ -584,42 +595,42 @@
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome *</label>
-						<input name="referencias-comercial-nome" type="text" class="form-control" required="" />
+						<input name="referencias-comercial-nome" type="text" class="form-control" />
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">Telefone *</label>
-						<input class="form-control telefone" name="telefone-referencia-comercial" required="" />
+						<input class="form-control telefone" name="telefone-referencia-comercial"  />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome *</label>
-						<input name="referencias-comercial-nome2" type="text" class="form-control" required="" />
+						<input name="referencias-comercial-nome2" type="text" class="form-control"/>
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">Telefone *</label>
-						<input class="form-control telefone" name="telefone-referencia-comercial2" required="" />
+						<input class="form-control telefone" name="telefone-referencia-comercial2"  />
 					</div>
 				</div>
 				<h2>Referencias pessoais</h2>
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome *</label>
-						<input name="referencias-pessoais-nome" type="text" class="form-control" required="" />
+						<input name="referencias-pessoais-nome" type="text" class="form-control"  />
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">Telefone *</label>
-						<input class="form-control telefone" name="telefone-referencia-pessoal" required="" />
+						<input class="form-control telefone" name="telefone-referencia-pessoal"  />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Nome *</label>
-						<input name="referencias-pessoais-nome2" type="text" class="form-control" required="" />
+						<input name="referencias-pessoais-nome2" type="text" class="form-control" />
 					</div>
 					<div class="col-md-6">
 						<label class="control-label">Telefone *</label>
-						<input class="form-control telefone" name="telefone-referencia-pessoal2" required="" />
+						<input class="form-control telefone" name="telefone-referencia-pessoal2"/>
 					</div>
 				</div>
 			</div>
@@ -639,7 +650,7 @@
 				<div class="form-group">
 					<div class="col-md-12">
 						<label class="control-label">Outras Informações *</label>
-						<textarea name="cartoes" class="form-control"></textarea>
+						<textarea name="outras-info" class="form-control"></textarea>
 					</div>
 				</div>
 			</div>

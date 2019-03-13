@@ -47,21 +47,21 @@
                             
 							<li class="title">PESSOAS</li>
 							<li>
-								<a href="#"><span class="nav-icon-hexa text-sea-100">Ue</span> Locadores</a>
+								<a href="#"><span class="nav-icon-hexa text-sea-100">Lo</span> Locadores</a>
 								<ul>                                
                                     <li><a href="https://focusadministradora.com/rentals/locadores/"><span class="nav-icon-hexa">AL</span> Todos os locadores</a></li>
                                     <li><a href="https://focusadministradora.com/rentals/locadores/adicionar-locador/"><span class="nav-icon-hexa">TL</span> Adicionar locador</a></li>
                                 </ul>
 							</li>
 							<li>
-                                <a href="#"><span class="nav-icon-hexa text-teal-100">Fe</span> Locatários</a>
+                                <a href="#"><span class="nav-icon-hexa text-teal-100">Lo</span> Locatários</a>
 								<ul>                                
                                     <li><a href="https://focusadministradora.com/rentals/locatarios/"><span class="nav-icon-hexa">AL</span> Todos os locatários</a></li>
                                     <li><a href="https://focusadministradora.com/rentals/locatarios/adicionar-locatario/"><span class="nav-icon-hexa">TL</span> Adicionar locatário</a></li>
                                 </ul>
 							</li>
 							<li>
-                                <a href="#"><span class="nav-icon-hexa text-blue-100">Ic</span> Fiadores</a>
+                                <a href="#"><span class="nav-icon-hexa text-blue-100">Fi</span> Fiadores</a>
 								<ul>                                
                                     <li><a href="https://focusadministradora.com/rentals/fiadores/"><span class="nav-icon-hexa">AF</span> Todos os fiadores</a></li>
                                     <li><a href="https://focusadministradora.com/rentals/fiadores/adicionar-fiador/"><span class="nav-icon-hexa">TF</span> Adicionar fiador</a></li>

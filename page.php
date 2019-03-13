@@ -35,14 +35,20 @@
 				</div>
 				<div class="block-content">
 					<?php if(is_page(277)) { include (TEMPLATEPATH . '/criar-anuncio.php');  ?>
+					<?php } else if(is_page(366)) { include (TEMPLATEPATH . '/confirmar-anuncio.php');  ?>
+					<?php } else if(is_page(286)) { include (TEMPLATEPATH . '/anuncios.php');  ?> 
 					
 					<?php } else if(is_page(300)) { include (TEMPLATEPATH . '/criar-locatario.php');  ?>
 					<?php } else if(is_page(325)) { include (TEMPLATEPATH . '/confirmar-locatario.php');  ?>
 					<?php } else if(is_page(298)) { include (TEMPLATEPATH . '/locatarios.php');  ?> 
 					
 					<?php } else if(is_page(296)) { include (TEMPLATEPATH . '/criar-locador.php');  ?>
+					<?php } else if(is_page(358)) { include (TEMPLATEPATH . '/confirmar-locador.php');  ?>
+					<?php } else if(is_page(294)) { include (TEMPLATEPATH . '/locadores.php');  ?> 
 					
 					<?php } else if(is_page(304)) { include (TEMPLATEPATH . '/criar-fiador.php');  ?>
+					<?php } else if(is_page(364)) { include (TEMPLATEPATH . '/confirmar-fiador.php');  ?>
+					<?php } else if(is_page(302)) { include (TEMPLATEPATH . '/fiadores.php');  ?> 
 					
 					<?php } else { while ( have_posts() ) : the_post(); the_content(); endwhile; } ?>
 				</div>

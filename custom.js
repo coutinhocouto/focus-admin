@@ -203,7 +203,7 @@ jQuery(document).on('blur', "#cep4", function () {
 });
 
 jQuery(document).ready(function($){
- 
+ 	
 	$('.cep').mask('00000-000');
 	$('.cpf').mask('000.000.000-00', {reverse: true});
 	$('.date').mask('00/00/0000');
@@ -234,5 +234,36 @@ jQuery(document).ready(function($){
 		responsive: true
 	});
 	
+	$('#sub-anuncio option').hide();
+	$('#categoria-anuncio option').hide();
+	
+	$("#tipo-anuncio").change(function(){
+	
+		$("#sub-anuncio option").hide();
+		$("#categoria-anuncio option").hide();
+		if ( $(this).val() === "Apartamento" ) { 
+			$("#sub-anuncio .ap").show();
+			$("#categoria-anuncio .ap").show();
+        } else if ( $(this).val() === "Casa" )  {
+			$("#sub-anuncio .casa").show();
+			$("#categoria-anuncio .casa").show();
+		} else if ( $(this).val() === "Terreno" )  {
+			$("#sub-anuncio .terreno").show();
+			$("#categoria-anuncio .outros").show();
+		} else if ( $(this).val() === "Comercial/Industrial" )  {
+			$("#sub-anuncio .comercial").show();
+			$("#categoria-anuncio .comercial").show();
+		} else if ( $(this).val() === "Terreno" )  {
+			$("#sub-anuncio .outros").show();
+			$("#categoria-anuncio .outros").show();
+		} else if ( $(this).val() === "Rural" )  {
+			$("#sub-anuncio .outros").show();
+			$("#categoria-anuncio .outros").show();
+		} else if ( $(this).val() === "Flat/ApartHotel" )  {
+			$("#sub-anuncio .outros").show();
+			$("#categoria-anuncio .outros").show();
+		}
+		
+	});
   
 });

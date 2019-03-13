@@ -216,6 +216,12 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Complemento</label>
+						<input class="form-control" type="text" name="complemento-pessoal" />
+					</div>
+				</div>
+				<div class="form-group">
 					<div class="col-md-6">
 						<label class="control-label">Telefone * </label>
 						<input class="form-control telefone" type="text" name="telefone-pessoal"  required="required" />
@@ -324,6 +330,12 @@
 							<option value="SE">SE</option>
 							<option value="TO">TO</option>
 						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Complemento</label>
+						<input class="form-control" type="text" name="complemento-profissional" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -515,6 +527,12 @@
 							<option value="SE">SE</option>
 							<option value="TO">TO</option>
 						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Complemento</label>
+						<input class="form-control" type="text" name="complemento-conjuje" />
 					</div>
 				</div>
 				<div class="form-group">

@@ -20,7 +20,7 @@ $residencia_file_url = wp_get_attachment_url($residencia_file);
 $post_arr = array(
     'post_title'   => $_POST["nome"],
     'post_status'  => 'publish',
-	'post_type'	   => 'locatario',
+	'post_type'	   => 'fiador',
     'post_author'  => get_current_user_id(),
     'meta_input'   => array(
 		'cpf-file' => $cpf_file_url,
@@ -125,5 +125,5 @@ wp_insert_post( $post_arr, $wp_error );
 	<div class="alert-icon">
 		<span class="icon-checkmark-circle"></span> 
 	</div>
-	<strong>Sucesso!</strong> Locatário criado, estamos te direcionamento para a lista com todos os que você criou.
+	<strong>Sucesso!</strong> Fiador criado, estamos te direcionamento para a lista com todos os que você criou.
 </div>

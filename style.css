@@ -8,3 +8,5 @@ Version: 1.0
 */
 
 .app .app-container .app-sidebar.dir-left {min-height: 100vh;}
+
+.divider-check .app-checkbox {width: 33%;}
