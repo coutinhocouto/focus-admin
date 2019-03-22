@@ -1,9 +1,5 @@
 <?php
 
-require_once( ABSPATH . 'wp-admin/includes/image.php' );
-require_once( ABSPATH . 'wp-admin/includes/file.php' );
-require_once( ABSPATH . 'wp-admin/includes/media.php' );
-
 $cpf_file = media_handle_upload('cpf-file', $post_id);
 $cpf_file_url = wp_get_attachment_url($cpf_file);
 

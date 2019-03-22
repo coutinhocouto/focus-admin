@@ -44,13 +44,16 @@
 						<td><?php echo get_post_meta( get_the_ID(), 'tipo', true ); ?></td>
 						<td><?php echo get_post_meta( get_the_ID(), 'bairro', true ); ?> / <?php echo get_post_meta( get_the_ID(), 'cidade', true ); ?></td>
 						<td>
-							<?php echo get_post_meta( get_the_ID(), 'valor-locacao', true ); ?> 
-							<?php if(get_post_meta( get_the_ID(), 'valor-locacao', true )) echo ' / ';?> 
-							<?php echo get_post_meta( get_the_ID(), 'valor-venda', true ); ?>
+							<?php if(get_post_meta( get_the_ID(), 'valor-locacao', true )) { ?>
+								R$ <?php echo get_post_meta( get_the_ID(), 'valor-locacao', true ); ?><br>
+							<?php } if(get_post_meta( get_the_ID(), 'valor-venda', true )) { ?>
+								R$ <?php echo get_post_meta( get_the_ID(), 'valor-venda', true ); ?><br>
+							<?php } ?>
 						</td>
+						
 						<td>
 							<a href="<?php the_permalink();?>"><button type="button" class="btn btn-default btn-icon"><span class="fa fa-eye"></span></button></a>
-							<button type="button" class="btn btn-default btn-icon"><span class="icon-cross"></span></button>
+							<?php echo wp_delete_post_link(); ?>
 						</td>
 					</tr>
 			

@@ -26,29 +26,14 @@
 
 <!-- START PAGE CONTAINER -->
 <div class="container">
+	
+	<?php 
 
-	<div class="row">
-		<div class="col-md-12">
-			<div class="block block-condensed">
-				<div class="app-heading app-heading-small">                                
-					<div class="title">
-						
-					</div>
-				</div>
-				<div class="block-content">
-					
-					<?php 
+		if ( is_singular( 'locatario' ) ) {	include (TEMPLATEPATH . '/ver-locatario.php');	}
+		if ( is_singular( 'anuncio' ) ) {	include (TEMPLATEPATH . '/ver-anuncio.php');	}
 
-						if ( is_singular( 'locatario' ) ) {
-							
-							include (TEMPLATEPATH . '/ver-locatario.php');
-							
-						}
-					?>
-				</div>
-			</div>
-		</div><!-- #main -->
-	</div><!-- #primary -->
+	?>
+				
 </div><!-- .wrap -->
 
 

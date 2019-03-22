@@ -22,7 +22,7 @@
 				<div class="form-group">
 					<div class="col-md-12">
 						<label class="control-label">Transação * </label>
-						 <select name="transacao" class="form-control" required="">
+						 <select name="transacao" class="form-control" id="transacao" required="">
 							<option value="">Selecione</option>
 							<option value="Locação">Locação</option>
 							<option value="Venda">Venda</option>
@@ -173,7 +173,7 @@
 				
 				<div class="form-group">
 					<div class="col-md-12">
-						<label class="control-label">Complemento * </label>
+						<label class="control-label">Complemento</label>
 						<input class="form-control" type="text" name="complemento" />
 					</div>
 				</div>
@@ -201,28 +201,27 @@
 				</div>
 				
 				<div class="form-group">
-					<div class="col-md-6">
+					<div class="col-md-3">
 						<div class="app-checkbox"> 
 							<label><input type="checkbox" name="possui-garagem" value="1"> Possui garagem?<span></span></label> 
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-3">
 						<label class="control-label">Vagas na garagem</label>
 						<input class="form-control" type="number" name="vagas-garagem" />
 					</div>
-				</div>
-				
-				<div class="form-group">
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<div class="app-checkbox"> 
 							<label><input type="checkbox" name="mobiliado" value="1"> Mobiliado?<span></span></label> 
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<label class="control-label">Andar </label>
 						<input class="form-control" type="number" name="andar" />
 					</div>
-					<div class="col-md-4">
+				</div>
+				<div class="form-group">
+					<div class="col-md-12">
 						<div class="app-checkbox"> 
 							<label><input type="checkbox" name="prox-metro" value="1"> Próximo ao metrô?<span></span></label> 
 						</div>
@@ -233,73 +232,88 @@
 					<div class="col-md-12">
 						<label class="control-label">Caraterísticas do imóvel</label><br>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Acessibilidade"> Acessibilidade<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Acessibilidade"> Acessibilidade<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Ar Condicionado"> Ar Condicionado<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Ar Condicionado"> Ar Condicionado<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Armário na cozinha"> Armário na cozinha<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Armário na Cozinha"> Armário na Cozinha<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Armário embutido no quarto"> Armário embutido no quarto<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Armário no Banheiro"> Armário no Banheiro<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Banheiro"> Banheiro<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Armário Embutido"> Armário Embutido<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Blindex"> Blindex<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Armário no Quarto"> Armário no Quarto<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Closet"> Closet<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Banheiro"> Banheira<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Cozinha Americana"> Cozinha Americana<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Blindex"> Blindex<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Depósito privativo no subsolo"> Depósito privativo no subsolo<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Churrasqueira"> Churrasqueira<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Dispensa"> Dispensa<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Closet"> Closet<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Gesso"> Gesso<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Cozinha Americana"> Cozinha Americana<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Lareira"> Lareira<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Depósito privativo no subsolo"> Depósito privativo no subsolo<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Lavabo"> Lavabo<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Dispensa"> Dispensa<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Ofurô"> Ofurô<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Gesso"> Gesso<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Piso de Madeira"> Piso de Madeira<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Lareira"> Lareira<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Piso laminado"> Piso laminado<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Lavabo"> Lavabo<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Piso de vinílico"> Piso de vinílico<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Ofurô"> Ofurô<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Porcelanato"> Porcelanato<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Piscina Privativa"> Piscina Privativa<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Quarto/WC Empregada"> Quarto/WC Empregada<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Piso de Madeira"> Piso de Madeira<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Sanca"> Sanca<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Piso Laminado"> Piso Laminado<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Teto rebaixado"> Teto rebaixado<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Piso de Vinílico"> Piso de Vinílico<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="Varanda"> Varanda<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Porcelanato"> Porcelanato<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-imovel[]" value="WC Empregada"> WC Empregada<span></span></label> 
+							<label><input type="checkbox" name="cimovel[]" value="Quarto/WC Empregada"> Quarto/WC Empregada<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="cimovel[]" value="Quarto Reversível"> Quarto Reversível<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="cimovel[]" value="Sanca"> Sanca<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="cimovel[]" value="Teto Rebaixado"> Teto Rebaixado<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="cimovel[]" value="Varanda"> Varanda<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="cimovel[]" value="WC Empregada"> WC Empregada<span></span></label> 
 						</div>
 					</div>
 				</div>
@@ -308,58 +322,88 @@
 					<div class="col-md-12">
 						<label class="control-label">Caraterísticas do condomínio</label><br>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Academia"> Academia<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Academia"> Academia<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Biblioteca"> Biblioteca<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Biblioteca"> Biblioteca<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Campo de futebol"> Campo de futebol<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Bilicletário"> Bilicletário<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Children care"> Children care<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Boliche"> Boliche<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Churrasqueira"> Churrasqueira<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Campo de Futebol"> Campo de Futebol<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Espaço gourmet"> Espaço gourmet<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Cantina"> Cantina<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Estacionamento para visitantes"> Estacionamento para visitantes<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Children Care"> Children Care<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Hall de entrada"> Hall de entrada<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Churrasqueira"> Churrasqueira<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Hidromassagem"> Hidromassagem<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Cinema"> Cinema<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Horta"> Horta<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Espaço Gourmet"> Espaço Gourmet<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Piscina"> Piscina<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Espaço Pet"> Espaço Pet<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Playground"> Playground<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Estacionamento para Visitantes"> Estacionamento para Visitantes<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Quadra de tênis"> Quadra de tênis<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Hall de Entrada"> Hall de Entrada<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Quadra poliesportiva"> Quadra poliesportiva<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Hidromassagem"> Hidromassagem<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Sala de ginástica"> Sala de ginástica<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Horta"> Horta<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Salão de festas"> Salão de festas<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Lavanderia"> Lavanderia<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Salão de jogos"> Salão de jogos<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Minimercado "> Minimercado <span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="carac-cond[]" value="Sauna"> Sauna<span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Piscina"> Piscina<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Playground"> Playground<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Portaria 24h"> Portaria 24h<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Quadra de Tênis"> Quadra de Tênis<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Quadra Poliesportiva"> Quadra Poliesportiva<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Sala de Ginástica"> Sala de Ginástica<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Salão de Beleza"> Salão de Beleza<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Salão de Festas"> Salão de Festas<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Salão de Jogos"> Salão de Jogos<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Sauna"> Sauna<span></span></label> 
+						</div>
+						<div class="app-checkbox"> 
+							<label><input type="checkbox" name="ccond[]" value="Transporte Comunitário"> Transporte Comunitário<span></span></label> 
 						</div>
 					</div>
 				</div>
@@ -368,40 +412,45 @@
 			<div class="tab-pane" id="tabs-4">
 				
 				<div class="form-group">
-					<div class="col-md-6">
-						<label class="control-label">Valor da locação </label>
+					<div class="col-md-6 valor-locacao">
+						<label class="control-label">Valor da locação *</label>
 						<input class="form-control money" type="text" name="valor-locacao" />
 					</div>
-					<div class="col-md-6">
-						<label class="control-label">Valor da venda </label>
-						<input class="form-control money" type="text" name="valor-venda" />
+					<div class="col-md-6 valor-venda">
+						<label class="control-label">Valor da venda *</label>
+						<input class="form-control money " type="text" name="valor-venda" />
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<label class="control-label">Numero do IPTU </label>
 						<input class="form-control" type="text" name="numero-iptu" />
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<div class="app-checkbox"> 
 							<label><input type="checkbox" name="isento-iptu" value="1"> Isento do IPTU?<span></span></label> 
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<label class="control-label">Valor IPTU </label>
 						<input class="form-control money" type="text" name="valor-iptu" />
+					</div>
+					<div class="col-md-3">
+						<label class="control-label">Valor do condomínio</label>
+						<input class="form-control money" type="text" name="valor-cond" />
 					</div>
 				</div>
 				
 				<div class="form-group">
+					
 					<div class="col-md-6">
 						<label class="control-label">Seguro incêndio </label>
 						<input class="form-control money" type="text" name="seg-incenio" />
 					</div>
 					<div class="col-md-6">
-						<label class="control-label">Arquivo de aceite *</label>
-						<input type="file" name="aceite" accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+						<label class="control-label">Arquivo de aceite</label>
+						<input type="file" name="aceite-file" accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 					</div>
 				</div>
 				
@@ -409,10 +458,7 @@
 			</div>
 			<div class="tab-pane" id="tabs-5">
 				<div class="form-group">
-					<div class="col-md-12">
-						<label class="control-label">Galeria de fotos</label>
-						<input type="file" name="galeria" accept=".jpg,.png,.jpeg" multiple/>
-					</div>
+					<input type="file" name="file" multiple />
 				</div>
 				<div class="form-group">
 					<div class="col-md-12">
@@ -428,7 +474,7 @@
 			</div>
 			</form>
 			
-			<input type="submit" class="btn btn-primary" value="Adicionar Locatário" style="margin-top: 30px;" />
+			<input type="submit" class="btn btn-primary" value="Adicionar Anúncio" style="margin-top: 30px;" />
 		</div>
 	</div>
 

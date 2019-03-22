@@ -265,5 +265,59 @@ jQuery(document).ready(function($){
 		}
 		
 	});
-  
+	
+	$(".valor-locacao").hide();
+	$(".valor-venda").hide();
+	
+	$("#transacao").change(function(){
+		if ( $(this).val() === "Locação" ) { 
+			$(".valor-locacao").show();
+			$(".valor-venda").hide();
+			$(".valor-locacao").attr("required", "true");
+			$(".valor-venda").attr("required", "false");
+		} else if ( $(this).val() === "Venda" )  {
+			$(".valor-locacao").hide();
+			$(".valor-venda").show();
+			$(".valor-locacao").attr("required", "false");
+			$(".valor-venda").attr("required", "true");
+		} else if ( $(this).val() === "Locação/Venda" )  {
+			$(".valor-locacao").show();
+			$(".valor-venda").show();
+			$(".valor-locacao").attr("required", "true");
+			$(".valor-venda").attr("required", "true");
+		} else if ( $(this).val() === "" )  {
+			$(".valor-locacao").hide();
+			$(".valor-venda").hide();
+			$(".valor-locacao").attr("required", "false");
+			$(".valor-venda").attr("required", "false");
+		}
+	});
+						   
 });
+
+var media_uploader = null;
+
+function open_media_uploader_multiple_images()
+{
+    media_uploader = wp.media({
+        frame:    "post",
+        state:    "insert",
+        multiple: true
+    });
+
+    media_uploader.on("insert", function(){
+
+        var length = media_uploader.state().get("selection").length;
+        var images = media_uploader.state().get("selection").models
+
+        for(var iii = 0; iii < length; iii++)
+        {
+            var image_url = images[iii].changed.url;
+            var image_caption = images[iii].changed.caption;
+            var image_title = images[iii].changed.title;
+        }
+    });
+
+    media_uploader.open();
+}
+  

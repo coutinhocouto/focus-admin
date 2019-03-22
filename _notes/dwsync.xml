@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="functions.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131965181798394492" remote="131965037400000000" Dst="1" />
-<file name="custom.js" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967491800573111" remote="131967347400000000" Dst="1" />
+<file name="functions.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131977041816392075" remote="131976897600000000" Dst="1" />
+<file name="custom.js" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131976976597664435" remote="131976832200000000" Dst="1" />
 <file name="footer.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950928784149688" remote="131939454000000000" Dst="1" />
-<file name="criar-anuncio.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967522655994750" remote="131967378600000000" Dst="1" />
+<file name="criar-anuncio.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131976978155965675" remote="131976834000000000" Dst="1" />
 <file name="page.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967514818993884" remote="131967370800000000" Dst="1" />
 <file name="criar-locatario.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967036462080360" remote="131966892000000000" Dst="1" />
-<file name="confirmar-locatario.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967034601091206" remote="131966890200000000" Dst="1" />
+<file name="confirmar-locatario.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131973331308018424" remote="131973187200000000" Dst="1" />
 <file name="index.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950928865748656" remote="131943768600000000" Dst="1" />
 <file name="criar-locador.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967473182468069" remote="131967328800000000" Dst="1" />
 <file name="style.css" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131965331089931822" remote="131965186800000000" Dst="1" />
 <file name="header.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967043419055438" remote="131966899200000000" Dst="1" />
 <file name="criar-fiador.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967516933978012" remote="131967372600000000" Dst="1" />
 <file name="locatarios.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950219156007275" remote="131950074600000000" Dst="1" />
-<file name="single.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950266618533706" remote="131950122600000000" Dst="1" />
+<file name="single.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131976996660869204" remote="131976852600000000" Dst="1" />
 <file name="ver-locatario.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950283776075943" remote="131950139400000000" Dst="1" />
 <file name="404.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950928448282773" remote="131837143800000000" Dst="1" />
 <file name="README.txt" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950928450062774" remote="131837143800000000" Dst="1" />
@@ -27,8 +27,9 @@
 <file name="sidebar.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131950929835999145" remote="131837143800000000" Dst="1" />
 <file name="confirmar-locador.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967450785414871" remote="131967306600000000" Dst="1" />
 <file name="locadores.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967072927041699" remote="131966928600000000" Dst="1" />
-<file name="confirmar-fiador.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967507102680842" remote="131967363000000000" Dst="1" />
+<file name="confirmar-fiador.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131973331540689265" remote="131973187200000000" Dst="1" />
 <file name="fiadores.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967480611912079" remote="131967336600000000" Dst="1" />
-<file name="anuncios.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967483275904536" remote="131967339000000000" Dst="1" />
-<file name="confirmar-anuncio.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131967522665738434" remote="131967378600000000" Dst="1" />
+<file name="anuncios.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131977238378034747" remote="131977093800000000" Dst="1" />
+<file name="confirmar-anuncio.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131973334974295823" remote="131973190800000000" Dst="1" />
+<file name="ver-anuncio.php" server="ftp.trogo.com.br//public_html/focusadministradora.com/rentals/wp-content/themes/focus-admin/" local="131977249204442223" remote="131977105200000000" Dst="1" />
 </dwsync>
