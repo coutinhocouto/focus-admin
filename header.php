@@ -6,6 +6,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/print.css" media="print" />
 
 		<?php wp_head(); ?>
 	</head>
@@ -29,7 +30,7 @@
                             <li><a href="<?php echo get_home_url(); ?>"><span class="nav-icon-hexa text-bloody-100">Pa</span> Painel</a></li>
                             <li>
                                 <a href="#">
-									<span class="nav-icon-hexa text-orange-100">AN</span> Anúncios <span class="label label-success label-bordered label-ghost">+5</span></a>
+									<span class="nav-icon-hexa text-orange-100">AN</span> Anúncios <!--<span class="label label-success label-bordered label-ghost">+5</span>--></a>
                                 <ul>                                
                                     <li><a href="https://focusadministradora.com/rentals/anuncios/"><span class="nav-icon-hexa">TA</span> Todos os anúnicios</a></li>
                                     <li><a href="https://focusadministradora.com/rentals/anuncios/criar-um-anuncio/"><span class="nav-icon-hexa">AA</span> Adicionar anúncio</a></li>
@@ -37,11 +38,11 @@
                             </li>
 							<li>
                                 <a href="#">
-									<span class="nav-icon-hexa text-orange-100">CO</span> Contratos <span class="label label-success label-bordered label-ghost">+5</span>
+									<span class="nav-icon-hexa text-orange-100">CO</span> Contratos <!--<span class="label label-success label-bordered label-ghost">+5</span>-->
 								</a>
                                 <ul>                                
                                     <li><a href="https://focusadministradora.com/rentals/contratos/"><span class="nav-icon-hexa">TC</span> Todos os contratos</a></li>
-                                    <li><a href="https://focusadministradora.com/rentals/contratos/criar-um-contrato/"><span class="nav-icon-hexa">AC</span> Adicionar contrato</a></li>
+                                    <li><a href="https://focusadministradora.com/rentals/contratos/criar-contrato/"><span class="nav-icon-hexa">AC</span> Adicionar contrato</a></li>
                                 </ul>
                             </li>
                             
@@ -67,16 +68,21 @@
                                     <li><a href="https://focusadministradora.com/rentals/fiadores/adicionar-fiador/"><span class="nav-icon-hexa">TF</span> Adicionar fiador</a></li>
                                 </ul>
 							</li>
+							<?php if(current_user_can('administrator') || current_user_can('editor' ) ) { ?>
+								<li>
+									<a href="https://focusadministradora.com/rentals/corretores/"><span class="nav-icon-hexa text-blue-100">Cr</span> Corretores</a>
+								</li>
+							<?php } ?>
 							
                             <li class="title">MINHA CONTA</li>                
                             <li>
                                 <a href="https://focusadministradora.com/rentals/editar-conta/"><span class="nav-icon-hexa text-lime-200">EC</span> Editar Conta</a>
                             </li>
        
-                            <li class="title">ADICIONAIS</li>							
+                            <!--<li class="title">ADICIONAIS</li>							
                             <li>
                                 <a href="https://focusadministradora.com/rentals/chat/"><span class="nav-icon-hexa text-purple-100">CH</span> Chat</a>
-                            </li>
+                            </li>-->
 							<li class="title">SAIR</li>							
                             <li>
                                 <a href="<?php echo wp_logout_url(); ?>"><span class="nav-icon-hexa text-yellow-100">SA</span> Sair</a>
@@ -108,7 +114,7 @@
                                             <button type="button" class="btn btn-default btn-icon" data-toggle="dropdown"><span class="icon-cog"></span></button>                        
                                             <ul class="dropdown-menu dropdown-left">
                                                 <li><a href="https://focusadministradora.com/rentals/editar-conta/"><span class="icon-cog"></span> Editar conta</a></li> 
-                                                <li><a href="https://focusadministradora.com/rentals/chat/"><span class="icon-envelope"></span> Chat</a></li>
+                                                <!--<li><a href="https://focusadministradora.com/rentals/chat/"><span class="icon-envelope"></span> Chat</a></li>-->
                                                 <li class="divider"></li>
                                                 <li><a href="<?php echo wp_logout_url(); ?>"><span class="icon-exit"></span> Sair</a></li> 
                                             </ul>

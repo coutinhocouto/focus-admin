@@ -1,9 +1,11 @@
 <?php
-
+$id = $_GET["pid"];
+	
 $aceite_file = media_handle_upload('aceite-file', $post_id);
 $aceite_file_url = wp_get_attachment_url($aceite_file);
 
 $post_arr = array(
+	'ID'           => $id,
     'post_title'   => $_POST["nome"],
     'post_status'  => 'publish',
 	'post_type'	   => 'anuncio',
@@ -34,22 +36,22 @@ $post_arr = array(
 		'valor-locacao' => $_POST["valor-locacao"],
 		'valor-venda' => $_POST["valor-venda"],
 		'isento-iptu' => $_POST["isento-iptu"],
+		'numero-iptu' => $_POST['numero-iptu'],
 		'valor-iptu' => $_POST["valor-iptu"],
 		'seg-incenio' => $_POST["seg-incenio"],
 		'valor-cond' => $_POST["valor-cond"],
 		'status' => $_POST["status"],
 		'cimovel' => $_POST['cimovel'],
 		'ccond' => $_POST['ccond'],
+		'usuario-adm' => $_POST['usuario-adm'],
+		'senha-adm' => $_POST['senha-adm'],	
     ),
 );
 
-$id = wp_insert_post( $post_arr, $wp_error );
+$idn = wp_update_post( $post_arr, $wp_error );
 
-$my_post = array('ID' => $id, 'post_title'   => 'FA' . $id,);
+$my_post = array('ID' => $idn, 'post_title'   => 'FA' . $id,);
 wp_update_post( $my_post );
-
-$galeria_file = media_handle_upload('galeria', $id);
-update_post_meta($post_id,  array_push($id, 'galeria', $galeria_file));
 
 ?>
 
@@ -60,5 +62,5 @@ update_post_meta($post_id,  array_push($id, 'galeria', $galeria_file));
 	<div class="alert-icon">
 		<span class="icon-checkmark-circle"></span> 
 	</div>
-	<strong>Sucesso!</strong> Anúncio criado, estamos te direcionamento para a lista com todos os que você criou.
+	<strong>Sucesso!</strong> Anúncio editado, estamos te direcionamento para a lista com todos os seus anúncios.
 </div>

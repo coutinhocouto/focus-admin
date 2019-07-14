@@ -5,7 +5,7 @@ function limpa_formulário_cep() {
 	$("#nf-field-24").val("");
 	$("#nf-field-25").val("");
 }
-jQuery(document).on('blur', "#cep1", function () {
+jQuery(document).on('blur', "#cep1 input", function () {
 
 	//Nova variável "cep" somente com dígitos.
     var cep = jQuery(this).val().replace(/\D/g, '');
@@ -20,20 +20,20 @@ jQuery(document).on('blur', "#cep1", function () {
       if(validacep.test(cep)) {
 
         //Preenche os campos com "..." enquanto consulta webservice.
-        jQuery("#log1").val("...");
-        jQuery("#bar1").val("...");
-        jQuery("#loca1").val("...");
-        jQuery("#uf1").val("...");
+        jQuery("#log1 input").val("...");
+        jQuery("#bar1 input").val("...");
+        jQuery("#loca1 input1").val("...");
+        jQuery("#uf1 select").val("...");
 
         //Consulta o webservice viacep.com.br/
         jQuery.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
           if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-            jQuery("#log1").val(dados.logradouro);
-            jQuery("#bar1").val(dados.bairro);
-           	jQuery("#loca1").val(dados.localidade);
-            jQuery("#uf1").val(dados.uf);
+            jQuery("#log1 input").val(dados.logradouro);
+            jQuery("#bar1 input").val(dados.bairro);
+           	jQuery("#loca1 input").val(dados.localidade);
+            jQuery("#uf1 select").val(dados.uf);
           } //end if.
           else {
             //CEP pesquisado não foi encontrado.
@@ -54,7 +54,7 @@ jQuery(document).on('blur', "#cep1", function () {
     }
 
 });
-jQuery(document).on('blur', "#cep2", function () {
+jQuery(document).on('blur', "#cep2 input", function () {
 
 	//Nova variável "cep" somente com dígitos.
     var cep = jQuery(this).val().replace(/\D/g, '');
@@ -69,20 +69,20 @@ jQuery(document).on('blur', "#cep2", function () {
       if(validacep.test(cep)) {
 
         //Preenche os campos com "..." enquanto consulta webservice.
-        jQuery("#log2").val("...");
-        jQuery("#bar2").val("...");
-        jQuery("#loca2").val("...");
-        jQuery("#uf2").val("...");
+        jQuery("#log2 input").val("...");
+        jQuery("#bar2 input").val("...");
+        jQuery("#loca2 input").val("...");
+        jQuery("#uf2 select").val("...");
 
         //Consulta o webservice viacep.com.br/
         jQuery.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
           if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-            jQuery("#log2").val(dados.logradouro);
-            jQuery("#bar2").val(dados.bairro);
-           	jQuery("#loca2").val(dados.localidade);
-            jQuery("#uf2").val(dados.uf);
+            jQuery("#log2 input").val(dados.logradouro);
+            jQuery("#bar2 input").val(dados.bairro);
+           	jQuery("#loca2 input").val(dados.localidade);
+            jQuery("#uf2 select").val(dados.uf);
           } //end if.
           else {
             //CEP pesquisado não foi encontrado.
@@ -103,7 +103,7 @@ jQuery(document).on('blur', "#cep2", function () {
     }
 
 });
-jQuery(document).on('blur', "#cep3", function () {
+jQuery(document).on('blur', "#cep3 input", function () {
 
 	//Nova variável "cep" somente com dígitos.
     var cep = jQuery(this).val().replace(/\D/g, '');
@@ -118,20 +118,20 @@ jQuery(document).on('blur', "#cep3", function () {
       if(validacep.test(cep)) {
 
         //Preenche os campos com "..." enquanto consulta webservice.
-        jQuery("#log3").val("...");
-        jQuery("#bar3").val("...");
-        jQuery("#loca3").val("...");
-        jQuery("#uf3").val("...");
+        jQuery("#log3 input").val("...");
+        jQuery("#bar3 input").val("...");
+        jQuery("#loca3 input").val("...");
+        jQuery("#uf3 select").val("...");
 
         //Consulta o webservice viacep.com.br/
         jQuery.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
           if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-            jQuery("#log3").val(dados.logradouro);
-            jQuery("#bar3").val(dados.bairro);
-           	jQuery("#loca3").val(dados.localidade);
-            jQuery("#uf3").val(dados.uf);
+            jQuery("#log3 input").val(dados.logradouro);
+            jQuery("#bar3 input").val(dados.bairro);
+           	jQuery("#loca3 input").val(dados.localidade);
+            jQuery("#uf3 select").val(dados.uf);
           } //end if.
           else {
             //CEP pesquisado não foi encontrado.
@@ -152,7 +152,7 @@ jQuery(document).on('blur', "#cep3", function () {
     }
 
 });
-jQuery(document).on('blur', "#cep4", function () {
+jQuery(document).on('blur', "#cep4 input", function () {
 
 	//Nova variável "cep" somente com dígitos.
     var cep = jQuery(this).val().replace(/\D/g, '');
@@ -167,20 +167,20 @@ jQuery(document).on('blur', "#cep4", function () {
       if(validacep.test(cep)) {
 
         //Preenche os campos com "..." enquanto consulta webservice.
-        jQuery("#log4").val("...");
-        jQuery("#bar4").val("...");
-        jQuery("#loca4").val("...");
-        jQuery("#uf4").val("...");
+        jQuery("#log4 input").val("...");
+        jQuery("#bar4 input").val("...");
+        jQuery("#loca4 input").val("...");
+        jQuery("#uf4 select").val("...");
 
         //Consulta o webservice viacep.com.br/
         jQuery.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
           if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-            jQuery("#log4").val(dados.logradouro);
-            jQuery("#bar4").val(dados.bairro);
-           	jQuery("#loca4").val(dados.localidade);
-            jQuery("#uf4").val(dados.uf);
+            jQuery("#log4 input").val(dados.logradouro);
+            jQuery("#bar4 input").val(dados.bairro);
+           	jQuery("#loca4 input").val(dados.localidade);
+            jQuery("#uf4 select").val(dados.uf);
           } //end if.
           else {
             //CEP pesquisado não foi encontrado.
@@ -204,14 +204,10 @@ jQuery(document).on('blur', "#cep4", function () {
 
 jQuery(document).ready(function($){
  	
-	$('.cep').mask('00000-000');
-	$('.cpf').mask('000.000.000-00', {reverse: true});
-	$('.date').mask('00/00/0000');
-	$('.telefone').mask('(00) 0000-00000');
-	$('.cnpj').mask('00.000.000/0000-00', {reverse: true});
-	$('.money').mask("#.##0,00", {reverse: true});
-	
 	$('#listagem-table').DataTable({
+		
+		responsive: true,
+		
 		"language": {
 			  "sEmptyTable": "Ainda não existe nada para ser exibido!",
 			  "sInfo": "Exibindo _START_ de _END_ do total de _TOTAL_",
@@ -231,93 +227,98 @@ jQuery(document).ready(function($){
 				"sLast": "Último"
 			  }
 		},
-		responsive: true
 	});
 	
 	$('#sub-anuncio option').hide();
-	$('#categoria-anuncio option').hide();
 	
-	$("#tipo-anuncio").change(function(){
+	$('#sub-anuncio select option').each(function(){
+      if (
+        $(this).val() == 'Apartamento Padrão' || 
+        $(this).val() == 'Cobertura' ||
+        $(this).val() == 'Kitchenette/Conjugados' ||
+        $(this).val() == 'Loft'
+      ) {
+          $(this).addClass('apartamento');
+	  } else if (
+        $(this).val() == 'Casa de Condomínio' || 
+        $(this).val() == 'Casa de Vila' || 
+        $(this).val() == 'Casa Padrão'
+      ) {
+          $(this).addClass('casa');
+	  } else if (
+        $(this).val() == 'Loteamento/Condomínio' ||
+        $(this).val() == 'Terreno Padrão'
+      ) {
+          $(this).addClass('terreno');
+	  } else if (
+        $(this).val() == 'Flat/ApartHotel'
+      ) {
+          $(this).addClass('flat');
+	  } else if (
+        $(this).val() == 'Rural'
+      ) {
+          $(this).addClass('rural');
+	  } else if (
+        $(this).val() == 'Box/Garagem' || 
+        $(this).val() == 'Casa Comercial' || 
+        $(this).val() == 'Conjunto Comercial/Sala' || 
+        $(this).val() == 'Galpão/Depósito/Armazém' || 
+        $(this).val() == 'Hotel' || 
+        $(this).val() == 'Indústria' || 
+        $(this).val() == 'Loja Shopping/ Ct Comercial' || 
+        $(this).val() == 'Loja/Salão' || 
+        $(this).val() == 'Motel' || 
+        $(this).val() == 'Pousada/Chalé' || 
+        $(this).val() == 'Prédio Inteiro' || 
+        $(this).val() == 'Studio')
+      {
+      	 $(this).addClass('comercial');
+      }
+	});
 	
+	$("#tipo-anuncio select").change(function(){			
 		$("#sub-anuncio option").hide();
-		$("#categoria-anuncio option").hide();
+		
+		console.log($(this).val());
 		if ( $(this).val() === "Apartamento" ) { 
-			$("#sub-anuncio .ap").show();
-			$("#categoria-anuncio .ap").show();
+			$("#sub-anuncio .apartamento").show();
         } else if ( $(this).val() === "Casa" )  {
 			$("#sub-anuncio .casa").show();
-			$("#categoria-anuncio .casa").show();
 		} else if ( $(this).val() === "Terreno" )  {
 			$("#sub-anuncio .terreno").show();
-			$("#categoria-anuncio .outros").show();
+		} else if ( $(this).val() === "Flat/ApartHotel" )  {
+			$("#sub-anuncio .flat").show();
+		} else if ( $(this).val() === "Rural" )  {
+			$("#sub-anuncio .rural").show();
 		} else if ( $(this).val() === "Comercial/Industrial" )  {
 			$("#sub-anuncio .comercial").show();
-			$("#categoria-anuncio .comercial").show();
-		} else if ( $(this).val() === "Terreno" )  {
-			$("#sub-anuncio .outros").show();
-			$("#categoria-anuncio .outros").show();
-		} else if ( $(this).val() === "Rural" )  {
-			$("#sub-anuncio .outros").show();
-			$("#categoria-anuncio .outros").show();
-		} else if ( $(this).val() === "Flat/ApartHotel" )  {
-			$("#sub-anuncio .outros").show();
-			$("#categoria-anuncio .outros").show();
 		}
 		
 	});
+
+	$('.acf-tab-group').addClass('nav nav-tabs nav-justified');
+	$('.acf-form-submit input, .acf-button').addClass('btn btn-primary');
+	$('.acf-field--post-title label').html('Nome Completo <span class="acf-required">*</span><strong></strong>');
 	
-	$(".valor-locacao").hide();
-	$(".valor-venda").hide();
-	
-	$("#transacao").change(function(){
-		if ( $(this).val() === "Locação" ) { 
-			$(".valor-locacao").show();
-			$(".valor-venda").hide();
-			$(".valor-locacao").attr("required", "true");
-			$(".valor-venda").attr("required", "false");
-		} else if ( $(this).val() === "Venda" )  {
-			$(".valor-locacao").hide();
-			$(".valor-venda").show();
-			$(".valor-locacao").attr("required", "false");
-			$(".valor-venda").attr("required", "true");
-		} else if ( $(this).val() === "Locação/Venda" )  {
-			$(".valor-locacao").show();
-			$(".valor-venda").show();
-			$(".valor-locacao").attr("required", "true");
-			$(".valor-venda").attr("required", "true");
-		} else if ( $(this).val() === "" )  {
-			$(".valor-locacao").hide();
-			$(".valor-venda").hide();
-			$(".valor-locacao").attr("required", "false");
-			$(".valor-venda").attr("required", "false");
-		}
-	});
-						   
+	$('#anuncio-status-change span').click(function() {
+        $("#anuncio-status-change").submit();
+    });
+
+
 });
 
-var media_uploader = null;
-
-function open_media_uploader_multiple_images()
-{
-    media_uploader = wp.media({
-        frame:    "post",
-        state:    "insert",
-        multiple: true
-    });
-
-    media_uploader.on("insert", function(){
-
-        var length = media_uploader.state().get("selection").length;
-        var images = media_uploader.state().get("selection").models
-
-        for(var iii = 0; iii < length; iii++)
-        {
-            var image_url = images[iii].changed.url;
-            var image_caption = images[iii].changed.caption;
-            var image_title = images[iii].changed.title;
-        }
-    });
-
-    media_uploader.open();
-}
+jQuery(window).load(function(){
   
+  if(jQuery('#tipo-anuncio select option:checked').text() === "Apartamento" ) { 
+    jQuery("#sub-anuncio .apartamento").show();
+  } if(jQuery('#tipo-anuncio select option:checked').text() === "Casa" )  {
+    jQuery("#sub-anuncio .casa").show();
+  } if(jQuery('#tipo-anuncio select option:checked').text() === "Terreno" )  {
+    jQuery("#sub-anuncio .terreno").show();
+  } if(jQuery('#tipo-anuncio select option:checked').text() === "Flat/ApartHotel" )  {
+    jQuery("#sub-anuncio .flat").show();
+  } if(jQuery('#tipo-anuncio select option:checked').text() === "Comercial/Industrial" )  {
+    jQuery("#sub-anuncio .comercial").show();
+  }
+	
+});

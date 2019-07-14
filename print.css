@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+@page {
+    size: auto;   /* auto is the initial value */
+    margin: 0;  /* this affects the margin in the printer settings */
+}
+
+div {display: none !important;}
+#contrato, #contrato div {display: block !important;}
+.block {border: none !important;}

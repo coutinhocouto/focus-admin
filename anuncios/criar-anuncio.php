@@ -6,13 +6,13 @@
 		</div>                                    
 	</div>
 
-	<div>
+	<!--<div>
 		<ul class="nav nav-tabs nav-justified">
 			<li class="active"><a href="#tabs-1" data-toggle="tab">Informações do Anúncio</a></li>
 			<li><a href="#tabs-2" data-toggle="tab">Localização</a></li>
 			<li><a href="#tabs-3" data-toggle="tab">Caraterísticas do Anúncio</a></li>
-			<li><a href="#tabs-4" data-toggle="tab">Valores e outras informações</a></li>
-			<li><a href="#tabs-5" data-toggle="tab">Imagens</a></li>
+			<li><a href="#tabs-4" data-toggle="tab">Valores</a></li>
+			<li><a href="#tabs-5" data-toggle="tab">Imagens e outras informações</a></li>
 		</ul>
 		
 		<form action="https://focusadministradora.com/rentals/anuncios/anuncio-adicionado-com-sucesso/" method="post" enctype="multipart/form-data" role="form" data-toggle="validator" novalidate="true">
@@ -52,7 +52,7 @@
 							<option value="Cobertura" class="ap">Cobertura</option>
 							<option value="Loft" class="ap">Loft</option>
 							<option value="Apartamento Padrão" class="ap">Apartamento Padrão</option>
-							<option value="Kichenette - Conjugados" class="ap">Kichenette - Conjugados</option>
+							<option value="Kichenette/Conjugados" class="ap">Kichenette/Conjugados</option>
 							<option value="Outros" class="ap">Outros</option>
 							
 							<option value="Casa de Condomínio" class="casa">Casa de Condomínio</option>
@@ -60,22 +60,22 @@
 							<option value="Casa Padrão" class="casa">Casa Padrão</option>
 							
 							<option value="Terreno Padrão" class="terreno">Terreno Padrão</option>
-							<option value="Loteamento - Condomínio" class="terreno">Loteamento - Condomínio</option>
+							<option value="Loteamento/Condomínio" class="terreno">Loteamento/Condomínio</option>
 
-							<option value="Box - Garagem" class="comercial">Box - Garagem</option>
+							<option value="Box/Garagem" class="comercial">Box - Garagem</option>
 							<option value="Prdio Inteiro" class="comercial">Prédio Inteiro</option>
-							<option value="Conjunto Comercial - Sala" class="comercial">Conjunto Comercial - Sala</option>
+							<option value="Conjunto Comercial - Sala" class="comercial">Conjunto Comercial/Sala</option>
 							<option value="Casa Comercial" class="comercial">Casa Comercial</option>
-							<option value="Loja Shopping - Ct comercial" class="comercial">Loja Shopping - Ct comercial</option>
-							<option value="Loja - Salão" class="comercial">Loja - Salão</option>
-							<option value="Galpão - Depósito - Armazém" class="comercial">Galpão - Depósito - Armazém</option>
+							<option value="Loja Shopping/Ct comercial" class="comercial">Loja Shopping/Ct comercial</option>
+							<option value="Loja/Salão" class="comercial">Loja - Salão</option>
+							<option value="Galpão/Depósito/Armazém" class="comercial">Galpão/Depósito/Armazém</option>
 							<option value="Studio" class="comercial">Studio</option>
 							<option value="Hotel" class="comercial">Hotel</option>
 							<option value="Motel" class="comercial">Motel</option>
-							<option value="Pousada - Chalé" class="comercial">Pousada - Chalé</option>
+							<option value="Pousada/Chalé" class="comercial">Pousada/Chalé</option>
 							<option value="Indústria" class="comercial">Indústria</option>
 							
-							<option value="outros" class="outros">Outros</option>
+							<option value="Outros" class="outros">Outros</option>
 						</select>
 					</div>
 					<div class="col-md-4">
@@ -370,7 +370,7 @@
 							<label><input type="checkbox" name="ccond[]" value="Lavanderia"> Lavanderia<span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
-							<label><input type="checkbox" name="ccond[]" value="Minimercado "> Minimercado <span></span></label> 
+							<label><input type="checkbox" name="ccond[]" value="Minimercado"> Minimercado <span></span></label> 
 						</div>
 						<div class="app-checkbox"> 
 							<label><input type="checkbox" name="ccond[]" value="Piscina"> Piscina<span></span></label> 
@@ -444,13 +444,9 @@
 				
 				<div class="form-group">
 					
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<label class="control-label">Seguro incêndio </label>
 						<input class="form-control money" type="text" name="seg-incenio" />
-					</div>
-					<div class="col-md-6">
-						<label class="control-label">Arquivo de aceite</label>
-						<input type="file" name="aceite-file" accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 					</div>
 				</div>
 				
@@ -458,7 +454,7 @@
 			</div>
 			<div class="tab-pane" id="tabs-5">
 				<div class="form-group">
-					<input type="file" name="file" multiple />
+					<div id="dropzone" class="dropzone"></div>					
 				</div>
 				<div class="form-group">
 					<div class="col-md-12">
@@ -470,12 +466,46 @@
 						</select>
 					</div>
 				</div>
+				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label">Arquivo de aceite</label>
+						<input type="file" name="aceite-file" accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-6">
+						<label class="control-label">Usuário (para emissão de boleto na administradora do imóvel) </label>
+						<input class="form-control" type="text" name="usuario-adm" />
+					</div>
+					<div class="col-md-6">
+						<label class="control-label">Senha (para emissão de boleto na administradora do imóvel) </label>
+						<input class="form-control" type="text" name="senha-adm" />
+					</div>
+				</div>
 				
 			</div>
 			</form>
 			
 			<input type="submit" class="btn btn-primary" value="Adicionar Anúncio" style="margin-top: 30px;" />
 		</div>
+	</div>-->
+	
+	<div>
+		<?php acf_form_head(); ?>
+		<?php
+		
+			acf_form(array(
+				'post_id'		=> 'new_post',
+				'field_groups' => array(14),
+				'updated_message' => __("Anúncio criado com sucesso!", 'acf'),
+				'new_post'		=> array(
+					'post_type'		=> 'anuncio',
+					'post_status'		=> 'publish'
+				),
+				'submit_value'		=> 'Adicionar Anuncio'
+			));
+
+		?>
 	</div>
 
 </div>
