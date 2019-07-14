@@ -92,7 +92,7 @@
 			<?php foreach ($locatarios as $locatario) {
 	
 				if(get_field('estado_civil', $locatario) == 'Casado(a)') {
-					$lt = 'Casado(a) com <span style="text-transform: uppercase">' . get_field('nome_conjuge', $locador) . '</span>, portador(a) da carteira de identidade nº ' . get_field('rg_conjuge', $locatario) . ' expedida pelo ' .  get_field('orgao_expedidor', $locatario) . ' e inscrito(a) no CPF/MF sob o nº ' .  get_field('cpf_conjuge', $locatario) . '.<br><br>';
+					$lt = 'Casado(a) com <span style="text-transform: uppercase">' . get_field('nome_conjuge', $locatario) . '</span>, portador(a) da carteira de identidade nº ' . get_field('rg_conjuge', $locatario) . ' expedida pelo ' .  get_field('orgao_expedidor', $locatario) . ' e inscrito(a) no CPF/MF sob o nº ' .  get_field('cpf_conjuge', $locatario) . '.<br><br>';
 				} else { $lt = '<br><br>'; };
 	
 				$locatariosfor.= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
